@@ -1,0 +1,37 @@
+% Ethics + Reproducibility statements. Per ICLR 2026 author guide these appear at the end
+% of the main text before references and do NOT count toward the page limit.
+
+\section*{Ethics statement}
+This work studies a conditioning channel that resists adversarial pressure by placing a
+belief outside the context window. The same property that makes a compiled disposition hard
+to argue out of also makes it invisible to an operator or auditor who can read a system
+prompt but cannot read compiled weights; we treat this dual-use tension as a first-class
+limitation rather than a footnote (Section~\ref{sec:limitations}). All experiments were run
+on debate topics with no personal or sensitive data; the two deployment incidents in the
+introduction are matters of public record. No human-subjects data was collected for the
+results reported here; the human-annotation reliability study referenced in
+Section~\ref{sec:limitations} is a blind rating of model transcripts and reports no
+personal information.
+
+\section*{AI-use statement}
+Large language models were used in this work in three capacities, each disclosed where it
+occurs. (1)~As the object of study: all conditioned models and baselines are LLMs.
+(2)~As judges: generation scoring uses an ensemble of commercial LLM judges under fixed
+rubrics (Appendix~\ref{app:multijudge}); judge identities, deviations, and agreement statistics
+are reported, and human validation of a 50-item subsample is in progress. (3)~As drafting and
+engineering assistance: portions of the experiment code and manuscript prose were drafted with
+LLM assistance under author direction; all experimental designs, claims, and conclusions were
+reviewed and are the responsibility of the authors. Anonymous reviewer-simulation passes with an
+LLM were used during revision to surface weaknesses; no reviewer text from any venue was used.
+
+\section*{Reproducibility statement}
+Every reported number traces to a committed data artifact and analysis script.
+Section~\ref{sec:dissociation} states the protocol, the six-judge scoring ensemble, and the
+strict \(=5\) scoring rule; Appendix~\ref{app:judge} gives the verbatim judge rubrics and
+Appendix~\ref{app:multijudge} the per-judge distributions and inter-rater agreement.
+Appendix~\ref{app:conditions} defines every condition with token budgets, and
+Appendix~\ref{app:repro} lists seeds, decoding settings, hardware, checkpoint identifiers,
+and the raw-result files behind each table, with a per-experiment pointer table
+(Appendix~\ref{app:expindex}) mapping every reported result to its pre-registration and
+analysis command. The significance analysis (paired bootstrap over topics with
+Holm--Bonferroni correction) is specified in Appendix~\ref{app:significance}.

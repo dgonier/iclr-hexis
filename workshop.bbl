@@ -1,0 +1,76 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Charakorn et~al.(2025)Charakorn, Cetin, Tang, and
+  Lange]{charakorn2025texttolora}
+Rujikorn Charakorn, Edoardo Cetin, Yujin Tang, and Robert~T. Lange.
+\newblock Text-to-{LoRA}: Instant transformer adaption.
+\newblock \emph{arXiv preprint arXiv:2506.06105}, 2025.
+
+\bibitem[Chen et~al.(2025)Chen, Fang, Xia, Liu, Van~Durme, Zettlemoyer, Gao,
+  and Cheng]{chen2025generativeadapter}
+Tong Chen, Hao Fang, Patrick Xia, Xiaodong Liu, Benjamin Van~Durme, Luke
+  Zettlemoyer, Jianfeng Gao, and Hao Cheng.
+\newblock {GenerativeAdapter}: Contextualizing language models in parameters
+  with a single forward pass.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
+
+\bibitem[Cheng et~al.(2026)Cheng, Shi, Zhang, and Li]{cheng2026overridegap}
+Shuaizhi Cheng, Xiang Shi, Zhiwei Zhang, and Mingwei Li.
+\newblock The override gap: A magnitude account of knowledge conflict failure
+  in hypernetwork-based instant {LLM} adaptation.
+\newblock \emph{arXiv preprint arXiv:2604.23750}, 2026.
+
+\bibitem[Le \& Le(2026)Le and Le]{le2026steeringrobustness}
+Kien Le and Thai Le.
+\newblock Adversarial robustness of activation steering in large language
+  models.
+\newblock \emph{arXiv preprint arXiv:2606.07696}, 2026.
+
+\bibitem[Li et~al.(2024)Li, Wornow, and Guha]{li2024measuring}
+Jinghui Li, Michael Wornow, and Neel Guha.
+\newblock Measuring and controlling persona drift in language model dialogs.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2024.
+
+\bibitem[Perez et~al.(2018)Perez, Strub, De~Vries, Dumoulin, and
+  Courville]{perez1970film}
+Ethan Perez, Florian Strub, Harm De~Vries, Vincent Dumoulin, and Aaron
+  Courville.
+\newblock {FiLM}: Visual reasoning with a general conditioning layer.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~32, 2018.
+
+\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
+  Chen, Heiner, Pettit, Olsson, Kundu, Kadavath, et~al.]{perez2022persona}
+Ethan Perez, Sam Ringer, Kamil{\.e} Luko{\v{s}}i{\=u}t{\.e}, Karina Nguyen,
+  Edwin Chen, Scott Heiner, Craig Pettit, Catherine Olsson, Sandipan Kundu,
+  Saurav Kadavath, et~al.
+\newblock Discovering language model behaviors with model-written evaluations.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2023}, 2023.
+\newblock Persona consistency / opposing-persona convergence probes; also
+  \texttt{perez2023discovering} above.
+
+\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell, Bowman,
+  Cheng, Durmus, Hatfield-Dodds, Johnston, et~al.]{sharma2024towards}
+Mrinank Sharma, Meg Tong, Tomasz Korbak, David Duvenaud, Amanda Askell,
+  Samuel~R Bowman, Newton Cheng, Esin Durmus, Zac Hatfield-Dodds, Scott~R
+  Johnston, et~al.
+\newblock Towards understanding sycophancy in language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2024.
+
+\bibitem[Xu et~al.(2019)Xu, Sun, Zhang, Zhao, and Lin]{xu2019adain}
+Jingjing Xu, Xu~Sun, Zhiyuan Zhang, Guangxiang Zhao, and Junyang Lin.
+\newblock Understanding and improving layer normalization.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~32, 2019.
+\newblock Adaptive/conditional normalization (AdaLN) framing; conditioning
+  parameters produced per layer, as in the compiled write function.
+
+\end{thebibliography}

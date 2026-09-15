@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_instrument.aux
+The style file: style/iclr2027_conference.bst
+Database file #1: references.bib
+Warning--entry type for "moffatt2024aircanada" isn't style-file defined
+--line 532 of file references.bib
+Warning--entry type for "bakke2023chevy" isn't style-file defined
+--line 543 of file references.bib
+Warning--can't use both volume and number fields in perez1970film
+You've used 43 entries,
+            2773 wiz_defined-function locations,
+            784 strings with 14453 characters,
+and the built_in function-call counts, 21292 in all, are:
+= -- 1638
+> -- 1826
+< -- 13
++ -- 619
+- -- 573
+* -- 1803
+:= -- 3462
+add.period$ -- 137
+call.type$ -- 43
+change.case$ -- 311
+chr.to.int$ -- 40
+cite$ -- 87
+duplicate$ -- 900
+empty$ -- 1485
+format.name$ -- 622
+if$ -- 4305
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 45
+newline$ -- 231
+num.names$ -- 172
+pop$ -- 702
+preamble$ -- 1
+purify$ -- 273
+quote$ -- 0
+skip$ -- 698
+stack$ -- 0
+substring$ -- 111
+swap$ -- 67
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 448
+warning$ -- 1
+while$ -- 131
+width$ -- 0
+write$ -- 542
+(There were 3 warnings)

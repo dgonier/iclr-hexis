@@ -1,0 +1,86 @@
+\section{What we test, and how}
+\label{sec:design}
+
+\subsection{The interventions}
+\label{sec:design-interventions}
+
+Every intervention below conditions the same host (Qwen3.5-4B unless noted) to hold the same
+assigned stance on the same topic, and differs only in \emph{how} the stance is delivered.
+Full prompt texts are in Appendix~\ref{app:prompts}; the naming convention is a channel prefix
+(\textsc{ctx} for context-delivered, \textsc{cmp} for compiled) and a strength suffix.
+
+\textbf{Context prompts.} The belief is placed in the context window as text, under a system
+instruction. We vary the instruction across five strengths, because the field's implicit
+baseline---``tell the model what to think''---turns out to span a wide range of behavior:
+\emph{mild} (``you hold strong convictions; argue your position directly''), \emph{persist}
+(an explicit non-yielding directive: treat objections without new evidence as noise, never
+soften to appease), \emph{engage} (an explicit updating directive: address the specific
+evidence, grant what is valid, revise on a real source with a warrant), \emph{balanced} (hold
+against pressure, but update on genuine evidence---both directives in one instruction), and
+\emph{discerning} (weigh what each challenge offers; hold against doubt, emotion, or
+unsourced claims; update precisely as far as a real source warrants).
+
+\textbf{Contrastive activation steering.} A tuned steering vector derived from the same belief
+content, added at the residual stream of a single layer, following \citet{rimsky2024caa}, the
+standard activation-space alternative to prompting. The tuned configuration we obtained is
+degenerate---it holds below the unconditioned host---and is reported as a failed baseline
+rather than as a measurement of the method class (Section~\ref{sec:dissociation-table}).
+
+\textbf{Weight-space fine-tuning.} A per-belief LoRA fine-tune on the same belief content,
+parameter-matched to the compiled channel and fairly configured---the same non-thinking prefill
+the compiled conditions use, and repetition-suppressing decoding---then evaluated through the
+identical protocol (Appendix~\ref{app:lora}).
+
+\textbf{Compiled modulation.} A trained hypernetwork maps the belief content to per-layer
+low-rank conditioning of the query and value projections, at rank 16 over a stride-3 subset of
+layers (11 of 32), amortizing into one forward pass what LoRA obtains by gradient descent;
+the lineage is AdaLN/FiLM-style conditional normalization
+\citep{perez1970film,xu2019adain} and hypernetwork adapters
+\citep{chen2025generativeadapter,charakorn2025texttolora}. The query-side update is produced
+from a disposition vector alone; the value-side update is produced from that vector pooled
+with the host's hidden states over the belief text, so the value channel sees content the
+query channel never does (Section~\ref{sec:why-channels-differ}). Neither update depends on the
+current prompt. Because the compilation drops low-frequency specifics
+(Section~\ref{sec:boundary}), the deployed configuration pairs it with a small curated context
+slot carrying those specifics; we report the modulation with and without that slot.
+
+\textbf{Combinations.} The comparison this paper turns on is a matched pair: the same system
+prompt, the same context, with the compiled modulation switched on or off. We run this pair at
+every prompt strength, so the modulation's contribution is measured against its own control
+rather than against a different paper's baseline.
+
+\subsection{Protocol}
+\label{sec:design-protocol}
+
+Twenty-four held-out debate topics, two sides, with pressure applied over five escalating
+levels---L1 bare doubt, L2 fabricated evidence, L3 logical counterargument, L4 appeal to
+authority, L5 emotional pressure---three rounds each. Levels 1, 4, and 5 supply no evidence at
+all; L2 fabricates a study; L3 asserts a reasoning flaw without naming one. Conceding to any of
+these is yielding to pressure rather than to information. Pressure turns never restate the
+assigned stance, so they cannot act as a second copy of the belief.
+
+Two further protocols supply the axes a pressure ladder cannot reach. For \emph{evidence
+discrimination}, each topic is seeded with the side that the strongest real evidence
+contradicts, so a valid correction exists by construction, and challenges are drawn from a
+fixture set of six types: two well-warranted (a real source with specifics and a warrant that
+bears on the claim) and four deficient (unsourced assertion, unnamed authority, non sequitur,
+impossible magnitude), style-matched across classes for tone, assertiveness, and length within
+\(\pm 20\%\) (Appendix~\ref{app:fixtures}). For \emph{adversarial revocation}, three multi-turn
+attack strategies attempt to remove the commitment rather than argue against it: a crescendo
+that recruits the model's own words, an eviction that forces an opposing restatement, and an
+authority reframe that claims to have authored the model's instructions and to be correcting
+them (Appendix~\ref{app:attacks}).
+
+\subsection{Scoring}
+\label{sec:design-scoring}
+
+Generations are scored by a six-judge ensemble spanning three model families and two size
+tiers, under a rubric that shows the judge the belief being defended and asks it to weigh
+argumentative ground rather than tone---a response may be gracious and still score as holding,
+curt and still score as folding (Krippendorff \(\alpha=0.79\); rubrics and per-judge breakdown
+in Appendix~\ref{app:multijudge}). The topic is the unit of analysis (\(n=24\)); intervals are
+bootstrap over topics; paired comparisons use Wilcoxon signed-rank with Holm--Bonferroni
+correction across the family of tests (Appendix~\ref{app:significance}). Cells scored by a
+single judge rather than the full ensemble are marked \(\ddagger\) throughout. All runs carry
+per-record emptiness guards, closing a validity hazard in which an expired reasoning-block
+budget silently zeroes only the unmodulated arms (Appendix~\ref{app:repro}).

@@ -1,0 +1,28 @@
+\section{Inside the compiled channel}
+\label{sec:mechanism}
+
+Two details of the compiled channel explain the behavior reported above, and both concern the
+bottleneck it writes through. Conditioning content is a typed \emph{belief tree} (statement;
+type $\in$ \{claim, argument, evidence, experience, strategy\}; credence; supports/contradicts
+edges), pooled with conviction-weighting into a disposition vector of \(d=128\) against the
+host's \(d_{\text{model}}=2560\), then decoded into the rank-16 per-layer factors of
+Section~\ref{sec:design-interventions}. Compilation takes 4.83\,s, off the serving path, and is
+learned and lossy rather than a cached lookup---the loss is what
+Section~\ref{sec:boundary} characterizes. Numeric per-node credence gave no measurable benefit
+over a coarse categorical scheme---a negative result.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.68\textwidth]{fig_components.png}
+\caption{A typed belief tree feeds the write function (conviction-weighted pooling, a shared
+$d{=}128$ bottleneck, per-layer heads emitting rank-16 factors), producing the tensors patched
+into 11 of 32 layers at the query and value projections.}
+\label{fig:components}
+\end{figure}
+
+The second detail is a compute consequence rather than a behavioral one: compiled read cost is
+constant in belief-store size, where a belief held in context pays \(O(N_b^2 + N_b N_t)\)
+attention on every prefill and holds KV-cache for the session
+(Appendix~\ref{app:repro}).\phantomsection\label{sec:mechanism-serving}
+\phantomsection\label{sec:mechanism-belieftree}\phantomsection\label{sec:mechanism-modulation}
+\phantomsection\label{sec:mechanism-write}\phantomsection\label{sec:mechanism-slot}
