@@ -1,0 +1,61 @@
+\section{Objections and controls}
+\label{sec:objections}
+
+Each result above invites an alternative explanation. We ran the control for each rather than
+arguing about it; Table~\ref{tab:objections} states the outcome and points to the protocol.
+
+\begin{table}[tb]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Alternative explanations and the experiments that address them. Every row is a run
+reported in this paper.}
+\label{tab:objections}
+\small
+\begin{tabular}{@{}p{0.30\textwidth}p{0.62\textwidth}@{}}
+\toprule
+Objection & Control and outcome \\
+\midrule
+Hold and discrimination are really installation differences &
+Recomputing both over only the topics where the stance installed leaves every ordering
+unchanged; install and hold are uncorrelated for the compiled arm (\(\rho=-0.11\)), and gating
+the discriminating arms' AUC costs little (\(0.72\to0.69\), \(0.68\to0.64\)).
+App.~\ref{app:installgate} \\
+Discrimination is prior-restoration, since topics are seeded against the evidence &
+Given deficient challenges pushing \emph{toward} the prior, the model concedes 4.2\% of the
+time against 65--70\% for warranted challenges in the same direction. The movement tracks
+warrant, not direction. App.~\ref{app:priorcontrol} \\
+``Held'' is a repetition attractor &
+8-gram overlap with a response's own opening is near zero for every condition, and hold under a
+turn-gated schedule that restores diversity to 0.108 is still 73.4\%, against 58.9\% for
+context. App.~\ref{app:attractor} \\
+Judges reward length, and modulation-off responses run twice as long &
+Re-scoring all 1{,}776 canonical generations in full leaves installation identical and moves
+hold by at most 3.0 points, preserving every ordering. App.~\ref{app:multijudge} \\
+The write function was meta-trained on pressure &
+No training stage references the evaluation's pressure templates; the only opposing content is
+static OPPOSES-edge evidence, never a multi-turn challenge, and training topics are disjoint
+from the evaluation topics. App.~\ref{app:curriculum} \\
+The hold is just weight-residence, or just the training objective &
+A parameter-matched LoRA on identical content holds 23\%, retrained on the compiled channel's
+margin criterion 48.7\%, and given an adversarial curriculum as well 45.2\%, against 84\% for
+compiled modulation. The objective explains about half the gap; the rest is unattributed.
+App.~\ref{app:loramargin} \\
+The fabricated first-person credentials are doing the work &
+Removing every experiential sentence from context and compilation leaves hold essentially
+unchanged (84\% to 82.4\%) and costs 19.7 points of installation. App.~\ref{app:canonical} \\
+The compiled channel only works on a small host &
+Compiling the same content for Qwen3.6-27B raises hold from 40.8\% to 65.0\% and cuts outright
+capitulation from 18.3\% to 2.5\%, over 240 generations per arm. That run scores hold by
+keyword overlap rather than this paper's rubric, so it establishes direction and magnitude at
+six times the parameter count rather than a comparable level. App.~\ref{app:crossfamily27b} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two limits are design properties rather than controls. Hold and discrimination are scored on
+different instruments, so an arm can fold often while rarely conceding to deficient challenges;
+the discriminating arms' folds concentrate where the pressure carries no evidence, making them
+weak against social pressure rather than against argument
+(App.~\ref{app:promptsweep-levels}). And only the install and hold cells are scored by the full
+ensemble; the rest are single- or three-judge and marked wherever they appear.

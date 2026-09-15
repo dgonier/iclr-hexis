@@ -1,0 +1,312 @@
+\begin{thebibliography}{43}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Anonymous(2026{\natexlab{a}})]{belieftrack2026}
+Anonymous.
+\newblock When should models change their minds? contextual belief management
+  in large language models.
+\newblock \emph{arXiv preprint}, 2026{\natexlab{a}}.
+\newblock Introduces BeliefTrack and the Failed Stay / Failed Update / Failed
+  Isolation taxonomy; contemporaneous preprint, cited for completeness.
+
+\bibitem[Anonymous(2026{\natexlab{b}})]{hines2026protreptic}
+Anonymous.
+\newblock From debate and dialogue to dialogical communication: A measurement
+  paradigm for democratic classrooms.
+\newblock Companion working paper, under review. Author withheld for
+  double-blind review., 2026{\natexlab{b}}.
+
+\bibitem[Bertalani{\v{c}} \& Fortuna(2026)Bertalani{\v{c}} and
+  Fortuna]{bertalanic2026costofconsensus}
+Bla{\v{z}} Bertalani{\v{c}} and Carolina Fortuna.
+\newblock The cost of consensus: Isolated self-correction prevails over
+  unguided homogeneous multi-agent debate.
+\newblock \emph{arXiv preprint arXiv:2605.00914}, 2026.
+
+\bibitem[Brown-Cohen et~al.(2023)Brown-Cohen, Irving, and
+  Piliouras]{browncohen2023doublyefficient}
+Jonah Brown-Cohen, Geoffrey Irving, and Georgios Piliouras.
+\newblock Scalable {AI} safety via doubly-efficient debate.
+\newblock \emph{arXiv preprint arXiv:2311.14125}, 2023.
+
+\bibitem[Buhl et~al.(2025)Buhl, Pfau, Hilton, and Irving]{buhl2025aisi}
+Marie~Davidsen Buhl, Jacob Pfau, Benjamin Hilton, and Geoffrey Irving.
+\newblock An alignment safety case sketch based on debate.
+\newblock \emph{arXiv preprint arXiv:2505.03989}, 2025.
+\newblock UK AI Security Institute.
+
+\bibitem[Charakorn et~al.(2025)Charakorn, Cetin, Tang, and
+  Lange]{charakorn2025texttolora}
+Rujikorn Charakorn, Edoardo Cetin, Yujin Tang, and Robert~T. Lange.
+\newblock Text-to-{LoRA}: Instant transformer adaption.
+\newblock \emph{arXiv preprint arXiv:2506.06105}, 2025.
+
+\bibitem[Charakorn et~al.(2026)Charakorn, Cetin, Uesaka, and
+  Lange]{charakorn2026doctolora}
+Rujikorn Charakorn, Edoardo Cetin, Shinnosuke Uesaka, and Robert~T. Lange.
+\newblock Doc-to-{LoRA}: Learning to instantly internalize contexts.
+\newblock \emph{arXiv preprint arXiv:2602.15902}, 2026.
+
+\bibitem[Chen et~al.(2025{\natexlab{a}})Chen, Arditi, Sleight, Evans, Lindsey,
+  et~al.]{chen2025personavectors}
+Runjin Chen, Andy Arditi, Henry Sleight, Owain Evans, Jack Lindsey, et~al.
+\newblock Persona vectors: Monitoring and controlling character traits in
+  language models.
+\newblock \emph{arXiv preprint arXiv:2507.21509}, 2025{\natexlab{a}}.
+
+\bibitem[Chen et~al.(2025{\natexlab{b}})Chen, Fang, Xia, Liu, Van~Durme,
+  Zettlemoyer, Gao, and Cheng]{chen2025generativeadapter}
+Tong Chen, Hao Fang, Patrick Xia, Xiaodong Liu, Benjamin Van~Durme, Luke
+  Zettlemoyer, Jianfeng Gao, and Hao Cheng.
+\newblock {GenerativeAdapter}: Contextualizing language models in parameters
+  with a single forward pass.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025{\natexlab{b}}.
+
+\bibitem[Cheng et~al.(2026)Cheng, Shi, Zhang, and Li]{cheng2026overridegap}
+Shuaizhi Cheng, Xiang Shi, Zhiwei Zhang, and Mingwei Li.
+\newblock The override gap: A magnitude account of knowledge conflict failure
+  in hypernetwork-based instant {LLM} adaptation.
+\newblock \emph{arXiv preprint arXiv:2604.23750}, 2026.
+
+\bibitem[{Chevrolet of Watsonville chatbot incident}(2023)]{bakke2023chevy}
+{Chevrolet of Watsonville chatbot incident}.
+\newblock A chevrolet dealership's {ChatGPT}-powered chatbot agrees to sell a
+  2024 chevy tahoe for \$1 and recommends competitors, December 2023.
+\newblock URL
+  \url{https://www.autoevolution.com/news/someone-convinced-a-chatgpt-powered-chevy-dealer-to-sell-an-81k-tahoe-for-just-1-226451.html}.
+\newblock Widely reported; users manipulated a dealership's ChatGPT-based
+  chatbot into a ``\$1, no takesies backsies'' sale offer and into recommending
+  rival vehicles.
+
+\bibitem[Choi et~al.(2024)Choi, Hong, Kim, and Kim]{choi2024identitydrift}
+Junhyuk Choi, Yeseon Hong, Minju Kim, and Bugeun Kim.
+\newblock Examining identity drift in conversations of {LLM} agents.
+\newblock \emph{arXiv preprint arXiv:2412.00804}, 2024.
+
+\bibitem[{Civil Resolution Tribunal of British
+  Columbia}(2024)]{moffatt2024aircanada}
+{Civil Resolution Tribunal of British Columbia}.
+\newblock Moffatt v.\ air canada, 2024 bccrt 149, February 2024.
+\newblock URL
+  \url{https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html}.
+\newblock Air Canada held liable for negligent misrepresentation by its website
+  chatbot; total award CAD~\$812.02 (\$650.88 damages, \$36.14 pre-judgment
+  interest, \$125 tribunal fees).
+
+\bibitem[Fanous et~al.(2025)Fanous, Goldberg, Agarwal, Lin, Zhou, Daneshjou,
+  and Koyejo]{fanous2025syceval}
+Aaron Fanous, Jacob Goldberg, Ank Agarwal, Joanna Lin, Anson Zhou, Roxana
+  Daneshjou, and Sanmi Koyejo.
+\newblock Syceval: Evaluating {LLM} sycophancy.
+\newblock In \emph{Proceedings of the AAAI/ACM Conference on AI, Ethics, and
+  Society (AIES)}, 2025.
+\newblock Distinguishes progressive (toward-correct) from regressive
+  (toward-incorrect) sycophancy.
+
+\bibitem[Hamblin(1970)]{hamblin1970fallacies}
+Charles~L. Hamblin.
+\newblock \emph{Fallacies}.
+\newblock Methuen, 1970.
+
+\bibitem[Irving et~al.(2018)Irving, Christiano, and Amodei]{irving2018debate}
+Geoffrey Irving, Paul Christiano, and Dario Amodei.
+\newblock {AI} safety via debate.
+\newblock \emph{arXiv preprint arXiv:1805.00899}, 2018.
+
+\bibitem[Khan et~al.(2024)Khan, Hughes, Valentine, Ruis, Sachan, Radhakrishnan,
+  Grefenstette, Bowman, Rockt{\"a}schel, and Perez]{khan2024persuasive}
+Akbir Khan, John Hughes, Dan Valentine, Laura Ruis, Kshitij Sachan, Ansh
+  Radhakrishnan, Edward Grefenstette, Samuel~R Bowman, Tim Rockt{\"a}schel, and
+  Ethan Perez.
+\newblock Debating with more persuasive {LLMs} leads to more truthful answers.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning (ICML)}, 2024.
+
+\bibitem[Laban et~al.(2023)Laban, Murakhovs'ka, Xiong, and
+  Wu]{laban2023flipflop}
+Philippe Laban, Lidiya Murakhovs'ka, Caiming Xiong, and Chien-Sheng Wu.
+\newblock Are you sure? challenging {LLMs} leads to performance drops in the
+  {FlipFlop} experiment.
+\newblock \emph{arXiv preprint arXiv:2311.08596}, 2023.
+
+\bibitem[Le \& Le(2026)Le and Le]{le2026steeringrobustness}
+Kien Le and Thai Le.
+\newblock Adversarial robustness of activation steering in large language
+  models.
+\newblock \emph{arXiv preprint arXiv:2606.07696}, 2026.
+
+\bibitem[Li et~al.(2024)Li, Wornow, and Guha]{li2024measuring}
+Jinghui Li, Michael Wornow, and Neel Guha.
+\newblock Measuring and controlling persona drift in language model dialogs.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2024.
+
+\bibitem[Liu et~al.(2026)Liu, Wang, Mao, Gelberg, Maron, and
+  Zhang]{liu2026shine}
+Yewei Liu, Xiyuan Wang, Yansheng Mao, Yoav Gelberg, Haggai Maron, and Muhan
+  Zhang.
+\newblock {SHINE}: A scalable in-context hypernetwork for mapping context to
+  {LoRA} in a single pass.
+\newblock \emph{arXiv preprint arXiv:2602.06358}, 2026.
+
+\bibitem[Mill(1978)]{mill1859liberty}
+John~Stuart Mill.
+\newblock \emph{On Liberty}.
+\newblock Hackett, 1978.
+\newblock Original work published 1859.
+
+\bibitem[Packer et~al.(2023)Packer, Wooders, Lin, Fang, Patil, Stoica, and
+  Gonzalez]{packer2023memgpt}
+Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir~G Patil, Ion
+  Stoica, and Joseph~E Gonzalez.
+\newblock {MemGPT}: Towards {LLMs} as operating systems.
+\newblock \emph{arXiv preprint arXiv:2310.08560}, 2023.
+
+\bibitem[Perez et~al.(2018)Perez, Strub, De~Vries, Dumoulin, and
+  Courville]{perez1970film}
+Ethan Perez, Florian Strub, Harm De~Vries, Vincent Dumoulin, and Aaron
+  Courville.
+\newblock {FiLM}: Visual reasoning with a general conditioning layer.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~32, 2018.
+
+\bibitem[Perez et~al.(2023)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e}, Nguyen,
+  Chen, Heiner, Pettit, Olsson, Kundu, Kadavath, et~al.]{perez2022persona}
+Ethan Perez, Sam Ringer, Kamil{\.e} Luko{\v{s}}i{\=u}t{\.e}, Karina Nguyen,
+  Edwin Chen, Scott Heiner, Craig Pettit, Catherine Olsson, Sandipan Kundu,
+  Saurav Kadavath, et~al.
+\newblock Discovering language model behaviors with model-written evaluations.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2023}, 2023.
+\newblock Persona consistency / opposing-persona convergence probes; also
+  \texttt{perez2023discovering} above.
+
+\bibitem[Plato(1987)]{plato1987gorgias}
+Plato.
+\newblock \emph{Gorgias}.
+\newblock Hackett, 1987.
+\newblock Translated by D.~J. Zeyl.
+
+\bibitem[Rimsky et~al.(2024)Rimsky, Gabrieli, Schulz, Tong, Hubinger, and
+  Turner]{rimsky2024caa}
+Nina Rimsky, Nick Gabrieli, Julian Schulz, Meg Tong, Evan Hubinger, and
+  Alexander~Matt Turner.
+\newblock Steering llama 2 via contrastive activation addition.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, 2024.
+
+\bibitem[Ryle(1949)]{ryle1949mind}
+Gilbert Ryle.
+\newblock \emph{The Concept of Mind}.
+\newblock Hutchinson, 1949.
+
+\bibitem[Schwitzgebel(2002)]{schwitzgebel2002belief}
+Eric Schwitzgebel.
+\newblock A phenomenal, dispositional account of belief.
+\newblock \emph{No\^us}, 36\penalty0 (2):\penalty0 249--275, 2002.
+
+\bibitem[Sharma et~al.(2024)Sharma, Tong, Korbak, Duvenaud, Askell, Bowman,
+  Cheng, Durmus, Hatfield-Dodds, Johnston, et~al.]{sharma2024towards}
+Mrinank Sharma, Meg Tong, Tomasz Korbak, David Duvenaud, Amanda Askell,
+  Samuel~R Bowman, Newton Cheng, Esin Durmus, Zac Hatfield-Dodds, Scott~R
+  Johnston, et~al.
+\newblock Towards understanding sycophancy in language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2024.
+
+\bibitem[Shinn et~al.(2023)Shinn, Cassano, Gopinath, Narasimhan, and
+  Yao]{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Ashwin Gopinath, Karthik~R Narasimhan, and Shunyu
+  Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2023.
+
+\bibitem[Stengel-Eskin et~al.(2025)Stengel-Eskin, Hase, and
+  Bansal]{stengeleskin2025persuasion}
+Elias Stengel-Eskin, Peter Hase, and Mohit Bansal.
+\newblock Teaching models to balance resisting and accepting persuasion.
+\newblock In \emph{Proceedings of the 2025 Conference of the Nations of the
+  Americas Chapter of the Association for Computational Linguistics}, 2025.
+
+\bibitem[Turner et~al.(2023)Turner, Thiergart, Udell, Leech, Mini, and
+  Pelrine]{turner2023activation}
+Alexander~Matt Turner, Lisa Thiergart, David Udell, Gavin Leech, Ulisse Mini,
+  and Monte Pelrine.
+\newblock Activation addition: Steering language models without optimization.
+\newblock \emph{arXiv preprint arXiv:2308.10248}, 2023.
+
+\bibitem[Wallace et~al.(2024)Wallace, Xiao, Leike, Weng, Heidecke, and
+  Beutel]{wallace2024instruction}
+Eric Wallace, Kai Xiao, Jan Leike, Lilian Weng, Johannes Heidecke, and Alex
+  Beutel.
+\newblock The instruction hierarchy: Training llms to prioritize privileged
+  instructions.
+\newblock \emph{arXiv preprint arXiv:2404.13208}, 2024.
+
+\bibitem[Walton \& Krabbe(1995)Walton and Krabbe]{walton1995commitment}
+Douglas Walton and Erik C.~W. Krabbe.
+\newblock \emph{Commitment in Dialogue: Basic Concepts of Interpersonal
+  Reasoning}.
+\newblock State University of New York Press, 1995.
+
+\bibitem[Wan et~al.(2024)Wan, Wallace, and Klein]{wan2024convincing}
+Alexander Wan, Eric Wallace, and Dan Klein.
+\newblock What evidence do language models find convincing?
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics}, 2024.
+
+\bibitem[Wang et~al.(2023)Wang, Yue, and Sun]{wang2023defend}
+Boshi Wang, Xiang Yue, and Huan Sun.
+\newblock Can {ChatGPT} defend its belief in truth? {E}valuating {LLM}
+  reasoning via debate.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP}, 2023.
+
+\bibitem[Wei et~al.(2023)Wei, Huang, Lu, Zhou, and Le]{wei2023synthetic}
+Jerry Wei, Da~Huang, Yifeng Lu, Denny Zhou, and Quoc~V. Le.
+\newblock Simple synthetic data reduces sycophancy in large language models.
+\newblock \emph{arXiv preprint arXiv:2308.03958}, 2023.
+
+\bibitem[Wu et~al.(2024{\natexlab{a}})Wu, Wu, and Zou]{wu2024clasheval}
+Kevin Wu, Eric Wu, and James Zou.
+\newblock {ClashEval}: Quantifying the tug-of-war between an {LLM}'s internal
+  prior and external evidence.
+\newblock In \emph{Advances in Neural Information Processing Systems 37
+  (Datasets and Benchmarks)}, 2024{\natexlab{a}}.
+
+\bibitem[Wu et~al.(2024{\natexlab{b}})Wu, Arora, Wang, Geiger, Jurafsky,
+  Manning, and Potts]{wu2024reft}
+Zhengxuan Wu, Aryaman Arora, Zheng Wang, Atticus Geiger, Dan Jurafsky,
+  Christopher~D. Manning, and Christopher Potts.
+\newblock {ReFT}: Representation finetuning for language models.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2024{\natexlab{b}}.
+
+\bibitem[Xie et~al.(2024)Xie, Zhang, Chen, Lou, and Su]{xie2024chameleon}
+Jian Xie, Kai Zhang, Jiangjie Chen, Renze Lou, and Yu~Su.
+\newblock Adaptive chameleon or stubborn sloth: Revealing the behavior of large
+  language models in knowledge conflicts.
+\newblock In \emph{The Twelfth International Conference on Learning
+  Representations}, 2024.
+
+\bibitem[Xu et~al.(2024)Xu, Lin, Yang, Zhang, Shi, Zhang, Fang, Xu, and
+  Qiu]{xu2024earthflat}
+Rongwu Xu, Brian Lin, Shujian Yang, Tianqi Zhang, Weiyan Shi, Tianwei Zhang,
+  Zhixuan Fang, Wei Xu, and Han Qiu.
+\newblock The earth is flat because...: Investigating {LLMs}' belief towards
+  misinformation via persuasive conversation.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics}, 2024.
+
+\bibitem[Zou et~al.(2023)Zou, Phan, Chen, Campbell, Guo, Ren, Pan, Yin,
+  Mazeika, Dombrowski, et~al.]{zou2023representation}
+Andy Zou, Long Phan, Sarah Chen, James Campbell, Phillip Guo, Richard Ren,
+  Alexander Pan, Xuwang Yin, Mantas Mazeika, Ann-Kathrin Dombrowski, et~al.
+\newblock Representation engineering: A top-down approach to {AI} transparency.
+\newblock \emph{arXiv preprint arXiv:2310.01405}, 2023.
+
+\end{thebibliography}
