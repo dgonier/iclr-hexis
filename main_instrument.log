@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.28)  15 SEP 2026 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.28)  15 SEP 2026 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -599,7 +599,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-(./sections/expcodes.tex) (./sections_instrument/abstract.tex)
+(./sections_instrument/expcodes.tex) (./sections_instrument/abstract.tex)
 (./sections_instrument/intro.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdft
 ex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
@@ -664,7 +664,7 @@ Underfull \hbox (badness 1365) in paragraph at lines 35--35
 Underfull \vbox (badness 2689) has occurred while \output is active []
 
  [9])
-(./sections_instrument/conclusion.tex) (./sections/statements.tex)
+(./sections_instrument/conclusion.tex) (./sections_instrument/statements.tex)
 (./main_instrument.bbl [10]
 Underfull \hbox (badness 10000) in paragraph at lines 77--85
 []\T1/ptm/m/n/10 (+20) Chevrolet of Wat-sonville chat-bot in-ci-dent.  A chevro
@@ -2242,12 +2242,16 @@ rescendo scored sep-a-rately via
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main_instrument.out' has not changed.
 (rerunfilecheck)             Checksum: EA1054A2DB246CB23D67EF3968526274;11746.
  ) 
 Here is how much of TeX's memory you used:
- 17252 strings out of 476106
- 266750 string characters out of 5793933
+ 17251 strings out of 476106
+ 266895 string characters out of 5793933
  1995975 words of memory out of 5000000
  38061 multiletter control sequences out of 15000+600000
  678983 words of font info for 565 fonts, out of 8000000 for 9000
