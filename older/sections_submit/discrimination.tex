@@ -1,0 +1,102 @@
+\section{Which channels tell good evidence from bad?}
+\label{sec:discrimination}
+
+Hold and engagement are coordinates; what the standard actually asks is whether a model's
+movements \emph{track the reasons offered}. Section~\ref{sec:measurement} makes that a
+detection question: treat the model's propensity to give ground as a detector of the quality of
+the challenge it received, and report the area under its ROC. Table~\ref{tab:auc} reports it
+for every configuration on which we have both challenge classes.
+
+
+\begin{table}[tb]
+\centering
+\setlength{\tabcolsep}{4pt}
+\caption{Discrimination and hold for every configuration, with the two challenge-class
+concession rates the AUC is computed from (plotted in Figure~\ref{fig:tradeoff},
+Appendix~\ref{app:tradeoff}). ``Modulation'' is whether the compiled channel
+was active. Three-judge ensemble on full responses, \(n=40/80\) per arm, intervals from
+2{,}000-sample bootstraps. \(^m\): hold from the matched-pairs protocol. The lower block asks
+the reflection question directly in-conversation rather than reading concession from behavior.}
+\label{tab:auc}
+\phantomsection\label{tab:reflect-inconv}
+\small
+\begin{tabular}{llccccc}
+\toprule
+Prompt & Modulation & AUC & 95\% CI & \(P(\text{con}\mid\text{good})\) & \(P(\text{con}\mid\text{bad})\) & Hold \\
+\midrule
+\multicolumn{7}{l}{\emph{Behavioral: concession read from what the model did under pressure}} \\
+\quad discerning & --- & \textbf{0.72} & [0.63, 0.81] & 50.0\% & 16.2\% & 50.3\%\(^m\) \\
+\quad discerning & active & \textbf{0.71} & [0.60, 0.81] & 62.5\% & 28.8\% & \textbf{71.1\%} \\
+\quad engage & --- & \textbf{0.68} & [0.58, 0.78] & 72.5\% & 47.5\% & 42.3\%\(^m\) \\
+\quad engage & active & 0.48 & [0.38, 0.59] & 43\% & 45\% & 68.6\% \\
+\quad persist & --- & 0.53 & [0.43, 0.64] & 0\% & 6\% & \textbf{97.8\%} \\
+\quad balanced & --- & 0.53 & [0.42, 0.63] & 10\% & 5\% & 80.7\% \\
+\quad mild & --- & 0.44 & [0.33, 0.53] & 10\% & 26\% & 58.9\% \\
+\quad mild & active & 0.48 & [0.38, 0.58] & 5\% & 19\% & 84.0\% \\
+\midrule
+\multicolumn{7}{l}{\emph{Asked the reflection question directly, channel active}} \\
+\quad mild & --- & 0.57 & & 12.5\% & 8.8\% & \\
+\quad persist & --- & 0.51 & & 0.0\% & 0.0\% & \\
+\quad mild & active & 0.68 & & 42.5\% & 16.2\% & \\
+\midrule
+\multicolumn{2}{l}{\emph{Separate reflection pass}} & \emph{0.68--0.73} & & \emph{65--70\%} & \emph{18.8--28.8\%} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The intervals support two groups, not eight. Only the prompts written to invite updating
+exclude chance: the \emph{discerning} prompt at \(0.72\) [0.63, 0.81], conceding to half of
+well-warranted challenges and a sixth of deficient ones, and the \emph{engage} prompt at \(0.68\)
+[0.58, 0.78]. Every other arm's interval contains \(0.5\), so within that second group the
+ordering (\(0.53\) for the two hold-only prompts, \(0.48\) for the compiled arms,
+\(0.44\) for the \emph{mild} prompt) is not a ranking we can defend; what is defensible is
+membership. Within that second group, the \emph{persist} prompt and the \emph{balanced} prompt concede so
+rarely in either class (0--10\%) that their near-chance AUC is a floor effect as much as a
+verdict, whereas the \emph{engage} prompt with modulation is at chance \emph{despite} conceding freely
+(43\%/45\%). The \emph{mild} prompt's concession profile is separately diagnostic: it yields to
+bare social pressure and holds against sourced challenges, which is sycophancy in the classic
+sense (Appendix~\ref{app:promptsweep-levels}).
+
+Read against the hold column, the two quantities come apart usefully. Among prompt-only arms
+they trade against each other: the \emph{discerning} prompt discriminates at \(0.72\) and holds
+50.3\%, while the \emph{persist} prompt holds 97.8\% and is at chance. The trade is not forced,
+because the four cells that vary prompt against channel show the two quantities have different
+sources. Discrimination follows the prompt and the modulation does not move it (\(0.44\) off
+and \(0.48\) on under a mild prompt; \(0.72\) off and \(0.71\) on under a discerning
+one). Hold follows the modulation, which adds \(+21.0\) points under the discerning prompt
+(50.3\% to 71.3\%, paired Wilcoxon \(p<0.001\); Appendix~\ref{app:matched}) while leaving
+the AUC where it was. Because neither destroys the other they stack, and the second row of Table~\ref{tab:auc} is that composition: \(0.71\) [0.60, 0.81] with
+71.1\% hold measured on the full protocol, the one arm we measured that is defensible on both
+axes.
+
+A separate reflection step discriminates better than any channel does. The unmodified host,
+reading the transcript afterward, reaches \(0.68\)--\(0.73\) whatever channel produced the
+conversation. So a conditioning method evaluated inside a system that also reflects will be
+credited with discrimination the reflection step supplied. Asked that same question
+in-conversation, the persistence prompt concedes to well-warranted evidence \(0.0\%\) of the
+time, 0 of 40.\expref{app:exp-disc}
+
+\paragraph{The integrity floor.} A model can also hold by misrepresenting what it was
+shown. Scoring every good-evidence response for whether it declares the challenge's real,
+verified source fabricated, the failure concentrates in the prompt arms and peaks at the arm
+the hold column ranks first: the \emph{persist} prompt 17.5\%, against 2.5\% and 0.0\% for the
+compiled arms (single judge, \(n=40\) per arm). Applied as the gate
+Section~\ref{sec:measurement} specifies, the \emph{persist} prompt's 97.8\% hold does not survive
+it. Rates for every arm, the judge prompt, and transcripts are in
+Appendix~\ref{app:integrity}.
+
+\paragraph{Replication on three further hosts.} The five prompts were rerun unchanged,
+prompt-only, on Ministral-8B-Instruct, \texttt{gemini-2.5-flash}, and \texttt{gpt-5.4-mini}.
+How much wording moves discrimination is strongly host-dependent: the spread across the five
+prompts is 0.34 on \texttt{gpt-5.4-mini} and 0.28 on Qwen3.5-4B, but 0.10 on Ministral and
+0.08 on \texttt{gemini-2.5-flash}, where every arm is within noise of chance. Nor is the
+ordering portable: Ministral's best arm is \emph{balanced}, and its persistence prompt
+discriminates at 0.68 because the host does not obey it, still conceding to 27.5\% of
+well-warranted challenges where Qwen concedes 0\%. What transfers is the operating-point
+relation. Over all four hosts and nineteen arm-host cells, every arm at floor-level conceding
+(\(\le\)10\% on well-warranted challenges) scores at or below 0.53 and every arm above 0.60
+concedes to at least 15\%, without exception; on \texttt{gpt-5.4-mini} the discerning prompt
+reaches 0.86 while the persistence prompt, its one floor-level arm, sits at 0.52. The claim is
+therefore about operating points rather than phrasings: a prompt matters only insofar as a
+given host obeys it (Appendix~\ref{app:crosshost}).
+

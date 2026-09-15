@@ -1,0 +1,71 @@
+\section{The instrument, and what it is applied to}
+\label{sec:measurement}
+\phantomsection\label{sec:design}
+
+\subsection{Five quantities and two floors}
+\label{sec:measurement-stack}
+
+A capitulation rate reads only one axis, and no weighted average of the two recovers the
+distinction: an average lets a high firmness score offset a low responsiveness one. We
+therefore report them separately. \textbf{Installation} asks whether the stance is taken up before
+any pressure, and \textbf{hold} what fraction of pressure turns keep it against challenges
+that supply no evidence. \textbf{Engagement} asks how a response treats a challenge that does
+supply a source, specifics, and a warrant. \textbf{Discrimination} asks whether movement tracks
+challenge quality, read as an AUC, and the \textbf{operating point} is the pair of concession
+rates at which that AUC is read. Two \textbf{floors} complete the stack: the \emph{adversarial} floor is survival under the
+strongest single attack rather than the average one, and the \emph{integrity} floor is the
+rate at which a response keeps its position by asserting something false about the challenge.
+Both are reported on their own and never averaged into anything else. Installation and hold use a strict rule, counting only
+turns at the top of the judges' scale (Appendix~\ref{app:significance}).
+
+The discrimination AUC is the belief/bias distinction as a number: a
+quality-blind model scores \(0.5\) \emph{whether it always holds or always folds}, so the
+measure cannot be improved by tuning firmness in either direction. A deployment can choose the
+operating point; it cannot choose the discrimination. The floors stay outside every aggregate
+because an exploit is found once and replayed, and because a model that holds by denying the
+record has not held a belief.
+
+\subsection{Interventions and protocol}
+\label{sec:design-interventions}
+Every intervention conditions the same host (Qwen3.5-4B unless noted) to hold the same assigned
+stance; prompt texts are verbatim in Appendix~\ref{app:prompts}. \textbf{Context prompts} at
+five strengths (\emph{mild}, \emph{persist}, \emph{engage}, \emph{balanced},
+\emph{discerning}, spanning ``argue your position directly'' to explicit never-yield and
+explicit update-on-evidence directives; ordered by how hard they push holding, \emph{engage}
+and \emph{discerning} invite updating most, \emph{mild} is neutral, and \emph{persist}
+forbids yielding). \textbf{Compiled modulation}: a trained write function reads a typed
+\emph{belief tree} (claims, arguments, and evidence with credences and SUPPORTS/CONTRADICTS
+edges) and emits, in one pass, a fixed rank-16 update to the query and value projections at 11
+of the host's 32 layers. The update is installed as a forward pre-hook, applies to every token
+of every turn, and is never recomputed mid-conversation, so the belief conditions the forward
+pass without occupying the context window. The two projections are built differently: the query
+factors come from a content-blind disposition vector, the value factors are compiled from the
+host's own hidden states over the belief text, and freezing them one at a time shows the value
+channel carries almost all of the hold. Because compilation drops exact statistics and
+unfamiliar proper nouns, the deployed configuration pairs the modulation with a short
+\emph{curated slot} carrying those specifics in context. The construction sits in the
+hypernetwork-adapter family
+\citep{chen2025generativeadapter,charakorn2025texttolora,perez1970film}. Everything needed to
+reproduce it, the update equations and dimensions, the write function's architecture and
+four-stage training curriculum, the belief-tree schema, the exact checkpoints, and the
+per-channel ablations, is in Appendices~\ref{app:compiled-internals}--\ref{app:schema} and
+\ref{app:qvchannels}.
+
+Arm names compose accordingly: \textsc{ctx}-persist is the persist prompt alone,
+\textsc{cmp}+engage is compiled modulation under the engage prompt, and \condF{} is the
+deployed configuration, modulation plus slot. \textbf{Matched pairs}, the comparison the paper turns
+on: the same prompt, same context, modulation on or off, at every prompt strength.
+\textbf{Attempted baselines}: contrastive steering \citep{rimsky2024caa} and a per-belief LoRA;
+the steering configuration is degenerate (holds below the unconditioned host) and the LoRA comparison is completed with an objective-matched control in
+Section~\ref{sec:objections}.
+
+Protocol: 24 held-out topics, five escalating pressure levels (bare doubt, fabricated
+evidence, unsupported flaw assertion, authority, emotional; verbatim templates in
+Appendix~\ref{app:l3templates}), three rounds each; pressure turns never restate
+the stance. Evidence discrimination uses six fixture types, two well-warranted (real source,
+specifics, warrant) and four deficient, style-matched within \(\pm20\%\)
+(Appendix~\ref{app:fixtures}); topics are seeded on the side the strongest real evidence
+contradicts. Adversarial revocation uses three multi-turn strategies ending in a cold probe
+(Appendix~\ref{app:attacks}). Scoring uses a five-judge cross-family ensemble of scriptable models under a rubric that weighs argumentative ground rather than tone (Krippendorff \(\alpha=0.79\)); a sixth judge, reachable only through an agent interface, is used for the headline install and hold cells alone (Appendix~\ref{app:multijudge}). Topic is the unit of analysis (\(n=24\)), intervals are bootstrapped over topics, and paired tests are Wilcoxon with Holm correction. Single-judge cells are marked \(\ddagger\), and an empty generation aborts the run rather than entering a denominator (Appendix~\ref{app:repro}). The canonical results table, with instrument, threshold,
+and context configuration stated per cell, is Appendix~\ref{app:canonical}; every number quoted
+below is a cell of it or is labelled with its run.
