@@ -1,6 +1,11 @@
 \section{Installing a position, and keeping it}
 \label{sec:dissociation}
 
+Installation and hold are separate properties, and the interventions trade them against each
+other: the prompt that installs most reliably holds least, the prompt that holds most
+discriminates least, and compiled modulation raises hold under most prompts at some cost in
+installation.
+
 \phantomsection\label{sec:dissociation-protocol}
 \subsection{Installation and hold come apart}
 \label{sec:dissociation-table}
@@ -10,20 +15,16 @@ placed in context under a mild instruction is taken up almost universally (95.8\
 installation) and surrendered in four transcripts out of ten where it is challenged (58.9\%
 hold). Compiled modulation is the mirror image. Alone it installs on 53\% of topics and holds
 81\%; paired with the curated slot it installs 78\% and holds 84\%. The full table, with instrument and threshold per cell, is
-Appendix~\ref{app:canonical}. Neither channel is better at
-``conditioning''; they are better at different halves of it, which is why we report the halves
-separately.
+Appendix~\ref{app:canonical}. Each channel is better at a different one of the two.
 
 The same arm shows what that costs. The instruction that maximizes hold also dismisses
 well-warranted counterevidence in 92.5\% of the turns where it is offered, against 55.0\% for
 a mild prompt; the compiled arm dismisses at a comparable 95.0\%, so high dismissal is a
 property of arms at the top of the hold range rather than of the persistence instruction
-alone. Read through the grid, \textsc{ctx}-persist has not been made robust; it has
-been moved to an extreme operating point, and it got there by ceasing to distinguish challenges
-at all. The instruction with the highest engagement score sits at the other end of the same trade
-(\emph{mild}, 2.80). Within the context channel the two requirements of the standard trade
-against each other almost perfectly, which is the first thing measuring them separately
-reveals.
+alone. On the grid, \textsc{ctx}-persist sits in the bias cell: it holds by ceasing to
+distinguish challenges at all. The instruction with the highest engagement score, \emph{mild}
+(2.80), sits at the other end, so within the context channel the two requirements trade
+against each other almost perfectly.
 
 Two of these quantities can disagree about the same response. \emph{Engagement} asks how a
 response treats the evidence it was shown, and \emph{concession} asks whether the position
@@ -34,9 +35,8 @@ instruction. The AUC of Section~\ref{sec:discrimination} is built only from conc
 \subsection{Matched pairs: what the compiled channel adds}
 \label{sec:dissociation-matched}
 
-Because the same instruction can be issued with the compiled modulation active or inactive, the
-comparison can hold the prompt and context fixed and vary only the representation of the
-commitment. Table~\ref{tab:matched} reports the five pairs (per-topic detail in
+With the prompt and context held fixed, adding the compiled modulation raises hold under four
+of the five prompts and lowers installation under four. Table~\ref{tab:matched} reports the five pairs (per-topic detail in
 Appendix~\ref{app:matched}).
 
 \begin{table}[tb]
@@ -64,13 +64,12 @@ discerning & 55.8\% & 50.3\% & 69.2\% & 71.3\% & \(+21.0\) [\(+15.1,+26.8\)] & \
 \end{tabular}
 \end{table}
 
-The modulation raises hold in four of five pairs and lowers it in the fifth (bootstrap CIs
-over topics, paired Wilcoxon; every pair significant). Three features carry the result. Under
+Every pair's difference is significant (bootstrap CIs over topics, paired Wilcoxon). Under
 \emph{persist} the modulation is slightly harmful (\(-4.9\)) because the instruction alone
 already reaches 96.9\%, which is how an operating-point mechanism should behave at the end of
 its range. The gain is largest where the prompt is weakest at holding: \emph{open} holds
-42.3\% alone and 70.3\% with the modulation. And the modulation costs installation in four of
-five pairs, by 12 to 17 points, which matters because an intervention that does not install
+42.3\% alone and 70.3\% with the modulation. The installation cost, 12 to 17 points, matters
+because an intervention that does not install
 cannot be evaluated on anything else.
 
 Because modulation-off responses run \(\sim\)1{,}370 characters against \(\sim\)650 for

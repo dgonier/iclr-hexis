@@ -49,13 +49,12 @@ configuration reaches the belief cell. Arms are labelled \emph{discrimination AU
 \label{fig:grid}
 \end{figure}
 
-This paper treats the distinction as a measurement problem, and then uses the measurement on an
-intervention of our own. The instrument reports five quantities and two floors (Section~\ref{sec:measurement}). The two that carry
+This is a measurement paper with a case study. Its contribution is the instrument; the
+interventions, including a method of our own, are what the instrument is applied to. It reports five quantities and two floors (Section~\ref{sec:measurement}). The two that carry
 the argument are \emph{hold}, whether a stance survives challenges that supply no evidence,
 and \emph{discrimination}, whether the model's movements track the quality of what it was
 shown. We apply it to system prompts at five strengths and to compiled low-rank attention
-modulation produced by a trained hypernetwork, our own intervention, held to the same
-instrument, in matched pairs where the representation of the commitment is the only variable
+modulation produced by a trained hypernetwork, in matched pairs where the representation of the commitment is the only variable
 across a comparison. Contrastive activation
 steering and a per-belief LoRA run as additional baselines, each with its own control in
 Section~\ref{sec:isolation}. Evaluation is 24 held-out debate topics under a
@@ -66,13 +65,13 @@ shows the judge the belief being defended and weighs argumentative ground rather
 Three results organize the accounting, and they are not equally well supported.
 \textbf{(1)~Hold is a setting, not a capability}: a four-sentence instruction lifts it from 58.9\% to 97.8\% while dismissing well-warranted counterevidence in 92.5\% of turns. This appears on every arm, every judge, and the full
 protocol, and is the firmest result here (Section~\ref{sec:dissociation}).
-\textbf{(2)~Hold and discrimination have different sources and \emph{can} compose}: hold is
-set by the channel (\(+21.0\) points under a discerning prompt, \(p<0.001\)) and
-discrimination by the prompt, and under that prompt the two stack, giving the one arm we
-measured that does both, \(0.71\) [0.60, 0.81] at 71.1\% hold on the full protocol. It does
-not generalize: under a second update-inviting prompt the same modulation takes discrimination
-to chance (\(0.68\to0.48\)), and what separates the two cases is unresolved
-(Section~\ref{sec:discrimination}).
+\textbf{(2)~Hold and discrimination come from different sources, and can sometimes be
+combined.} The system prompt sets discrimination; compiled modulation sets hold. Under the
+discerning prompt, adding the modulation raises hold by 21 points (\(p<0.001\)) and leaves
+discrimination unchanged, giving the only configuration we tested that does both: AUC 0.71
+[0.60, 0.81] at 71.1\% hold. The combination does not always work. Under the open prompt,
+which also invites updating, the same modulation drops discrimination from 0.68 to chance
+(0.48), and we do not yet know why (Section~\ref{sec:discrimination}).
 \textbf{(3)~What a claimed authority can revoke tracks
 the intervention, not weight-residence}: one-shot instructions and an objective-matched LoRA
 comply (0--4\% keep the stance), compiled modulation keeps it 40--75\%, per-turn re-injection

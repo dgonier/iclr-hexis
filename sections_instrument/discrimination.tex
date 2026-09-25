@@ -1,10 +1,11 @@
 \section{Which channels tell good evidence from bad?}
 \label{sec:discrimination}
 
-Hold and engagement are coordinates; what the standard actually asks is whether a model's
-movements \emph{track the reasons offered}. Section~\ref{sec:measurement} makes that a
-detection question: treat the model's propensity to give ground as a detector of the quality of
-the challenge it received, and report the area under its ROC. Table~\ref{tab:auc} reports it
+On the headline host, only prompts that invite updating produce discrimination. Holding harder
+never does, and
+compiled modulation adds none of its own. As in Section~\ref{sec:measurement}, the model's
+propensity to give ground is treated as a detector of the quality of the challenge it received,
+scored by the area under its ROC. Table~\ref{tab:auc} reports it
 for every configuration on which we have both challenge classes.
 
 
@@ -49,22 +50,18 @@ Prompt & Modulation & AUC & 95\% CI & \(P(\text{con}\mid\text{good})\) & \(P(\te
 The intervals support two groups, not eight. Only the prompts written to invite updating
 exclude chance: the \emph{discerning} prompt at \(0.72\) [0.63, 0.81], conceding to half of
 well-warranted challenges and a sixth of deficient ones, and the \emph{open} prompt at \(0.68\)
-[0.58, 0.78]. Every other arm's interval contains \(0.5\), so within that second group the
-ordering (\(0.53\) for the two hold-only prompts, \(0.48\) for the compiled arms,
-\(0.44\) for the \emph{mild} prompt) is not a ranking we can defend; what is defensible is
-membership. Within that second group, the \emph{persist} prompt and the \emph{balanced} prompt concede so
+[0.58, 0.78]. Every other arm's interval contains \(0.5\), so their ordering is not a ranking
+we can defend. Within that group, the \emph{persist} prompt and the \emph{balanced} prompt concede so
 rarely in either class (0--10\%) that their near-chance AUC is a floor effect as much as a
 verdict, whereas the \emph{open} prompt with modulation is at chance \emph{despite} conceding freely
 (43\%/45\%). The \emph{mild} prompt's concession profile is separately diagnostic: it yields to
 bare social pressure and holds against sourced challenges, which is sycophancy in the classic
 sense (Appendix~\ref{app:promptsweep-levels}).
 
-Read against the hold column, the two quantities come apart usefully. Among prompt-only arms
-they trade against each other: the \emph{discerning} prompt discriminates at \(0.72\) and holds
-50.3\%, while the \emph{persist} prompt holds 97.8\% and is at chance. The trade is not forced,
-because the six cells that vary prompt against channel show the two quantities have different
-sources. Hold follows the modulation, which adds \(+21.0\) points under the discerning prompt
-(50.3\% to 71.3\%, paired Wilcoxon \(p<0.001\); Appendix~\ref{app:matched}).
+Among prompt-only arms the two quantities trade against each other: the \emph{discerning}
+prompt discriminates at \(0.72\) and holds 50.3\%, the \emph{persist} prompt holds 97.8\% at
+chance. The trade is not forced, because hold follows the modulation, which adds \(+21.0\)
+points under the discerning prompt (\(p<0.001\); Appendix~\ref{app:matched}).
 
 Discrimination follows the prompt, but whether it survives the modulation depends on which
 prompt it is stacked with, and the three matched pairs disagree. Under \emph{mild} the AUC is

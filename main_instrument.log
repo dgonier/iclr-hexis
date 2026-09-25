@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.28)  25 SEP 2026 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.28)  25 SEP 2026 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,18 +609,12 @@ File: figures/fig_grid.png Graphic file (type png)
 <use figures/fig_grid.png>
 Package pdftex.def Info: figures/fig_grid.png  used on input line 44.
 (pdftex.def)             Requested size: 397.48499pt x 151.37341pt.
-
-Underfull \vbox (badness 5637) has occurred while \output is active []
-
  [2 <./figures/fig_grid.png (PNG copy)>]) (./sections_instrument/related.tex)
 (./sections_instrument/measurement.tex [3])
 (./sections_instrument/dissociation.tex [4])
-(./sections_instrument/isolation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5])
+(./sections_instrument/isolation.tex [5])
 (./sections_instrument/discrimination.tex [6]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 98
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 95
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -631,7 +625,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 1122) in paragraph at lines 97--111
+Underfull \hbox (badness 1122) in paragraph at lines 94--108
 \T1/ptm/m/n/10 (+20) ing moves dis-crim-i-na-tion is strongly host-dependent: t
 he spread across the five prompts
  []
@@ -640,7 +634,11 @@ he spread across the five prompts
 (./sections_instrument/discussion.tex) (./sections_instrument/future_work.tex)
 (./sections_instrument/objections.tex [8])
 (./sections_instrument/limitations.tex) (./sections_instrument/conclusion.tex)
-(./sections_instrument/statements.tex [9]) (./main_instrument.bbl [10]
+(./sections_instrument/statements.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9])
+(./main_instrument.bbl [10]
 Underfull \hbox (badness 10000) in paragraph at lines 77--85
 []\T1/ptm/m/n/10 (+20) Chevrolet of Wat-sonville chat-bot in-ci-dent.  A chevro
 -let deal-er-ship's ChatGPT-
@@ -1988,7 +1986,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
 [27] [28] [29] [30] [31]
-<figures/fig_components.png, id=764, 782.925pt x 272.9397pt>
+<figures/fig_components.png, id=765, 782.925pt x 272.9397pt>
 File: figures/fig_components.png Graphic file (type png)
 <use figures/fig_components.png>
 Package pdftex.def Info: figures/fig_components.png  used on input line 1474.
@@ -2069,7 +2067,7 @@ son\T1/ptm/m/n/10 (+20) ; write-up
  []
 
 [35]
-<figures/fig_tradeoff.png, id=873, 448.074pt x 281.853pt>
+<figures/fig_tradeoff.png, id=875, 448.074pt x 281.853pt>
 File: figures/fig_tradeoff.png Graphic file (type png)
 <use figures/fig_tradeoff.png>
 Package pdftex.def Info: figures/fig_tradeoff.png  used on input line 1767.
@@ -2212,11 +2210,11 @@ Package rerunfilecheck Info: File `main_instrument.out' has not changed.
 (rerunfilecheck)             Checksum: EA1054A2DB246CB23D67EF3968526274;11746.
  ) 
 Here is how much of TeX's memory you used:
- 17279 strings out of 476106
- 267170 string characters out of 5793933
+ 17258 strings out of 476106
+ 266955 string characters out of 5793933
  1992975 words of memory out of 5000000
- 38063 multiletter control sequences out of 15000+600000
- 683067 words of font info for 582 fonts, out of 8000000 for 9000
+ 38061 multiletter control sequences out of 15000+600000
+ 679338 words of font info for 569 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,12n,79p,1012b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
@@ -2238,10 +2236,10 @@ s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main_instrument.pdf (38 pages, 1034573 bytes).
+Output written on main_instrument.pdf (38 pages, 1034285 bytes).
 PDF statistics:
- 1038 PDF objects out of 1200 (max. 8388607)
- 931 compressed objects within 10 object streams
+ 1040 PDF objects out of 1200 (max. 8388607)
+ 933 compressed objects within 10 object streams
  206 named destinations out of 1000 (max. 500000)
- 89024 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 84928 words of extra memory for PDF output out of 89155 (max. 10000000)
 

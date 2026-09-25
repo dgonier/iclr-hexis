@@ -6,21 +6,20 @@
 \phantomsection\label{sec:isolation-rank}\phantomsection\label{sec:isolation-amplitude}%
 \phantomsection\label{sec:isolation-mmlu}
 
-A chain of ablations narrows what produces the hold, and the answer is deflationary.
+The compiled channel's hold comes from a fixed per-belief update, not from the modulation
+responding to its input, and what makes that update effective is how it was trained.
 Input-responsiveness is not the mechanism: frozen to a constant per-layer offset the modulation
 still holds 88.9\% [81.1, 95.3] against an 86.9\% anchor. Neither is rank: truncating the
 trained rank-16 update to rank 1 leaves persistence flat. Nor the context slot: modulation with
 the slot empty holds 91.9\% with zero belief tokens in context, while the slot alone holds
 57.5\%, matching context because it is context. What remains is close to a fixed per-belief
-low-rank \(Q/V\) delta, which is what a LoRA parameterizes; the LoRA controls that test this
+low-rank update, which is what a LoRA parameterizes; the LoRA controls that test this
 are in Section~\ref{sec:objections} and Appendix~\ref{app:loramargin}.
 
-What separates them after that is the meta-training curriculum, and the attribution turns close
-to circular: the write function is trained across many beliefs with a supports-versus-opposes
-contrastive term, so a component trained to prefer the assigned side in the presence of
-opposing content resists opposing content. The claim available is narrow: a parameter- and
-objective-matched adapter recovers part of the persistence and not the rest, and the remainder
-is unattributed between architecture and curriculum. On that reading the compiled channel's
+What separates them after that is the training: the write function is trained across many
+beliefs to prefer the assigned side in the presence of opposing content, so it resists opposing
+content. A parameter- and objective-matched adapter recovers part of the persistence and not
+the rest, and the remainder is unattributed between architecture and curriculum. On that reading the compiled channel's
 contribution is a training recipe whose product is deliverable as a fixed low-rank delta, and
 it remains the case the instrument is most useful on: a method that raises hold about as well
 as anything tested and supplies no judgment with it. Steering from the same content is reported

@@ -5,9 +5,9 @@
 \subsection{Five quantities and two floors}
 \label{sec:measurement-stack}
 
-A capitulation rate reads only one axis, and no weighted average of the two recovers the
-distinction: an average lets a high firmness score offset a low responsiveness one. We
-therefore report them separately. \textbf{Installation} asks whether the stance is taken up before
+A capitulation rate measures hold alone. Averaging hold with a measure of responsiveness to
+evidence would not fix this, because a model firm enough would score well while ignoring
+evidence entirely. We therefore report each quantity separately. \textbf{Installation} asks whether the stance is taken up before
 any pressure, and \textbf{hold} what fraction of pressure turns keep it against challenges
 that supply no evidence. \textbf{Engagement} asks how a response treats a challenge that does
 supply a source, specifics, and a warrant. \textbf{Discrimination} asks whether movement tracks challenge quality. Responses are scored
@@ -17,20 +17,24 @@ than a random deficient one (ties half). The \textbf{operating point} is one thr
 same variable, the concession rates at ensemble mean \(\le 3\). Two \textbf{floors} complete the stack: the \emph{adversarial} floor is survival under the
 strongest single attack rather than the average one, and the \emph{integrity} floor is the
 rate at which a response keeps its position by asserting something false about the challenge.
-Both are reported on their own and never averaged into anything else. Installation and hold use a strict rule, counting only
+Each floor is reported as its own rate and is not folded into hold or any other summary.
+Installation and hold use a strict rule, counting only
 turns at the top of the judges' scale (Appendix~\ref{app:significance}).
 
 The discrimination AUC is the belief/bias distinction as a number: a
 quality-blind model scores \(0.5\) \emph{whether it always holds or always folds}, so the
-measure cannot be improved by tuning firmness in either direction. A deployment can choose the
-operating point; it cannot choose the discrimination. The floors stay outside every aggregate
-because an exploit is found once and replayed, and because a model that holds by denying the
-record has not held a belief.
+measure cannot be improved by tuning firmness in either direction. The floors are kept
+separate because an average would hide them: an attacker needs to find a working exploit only
+once and can then reuse it, and a model that holds by misdescribing the evidence has not held
+a belief.
 
 \subsection{Interventions and protocol}
 \label{sec:design-interventions}
-Every intervention conditions the same host (Qwen3.5-4B unless noted) to hold the same assigned
-stance; prompt texts are verbatim in Appendix~\ref{app:prompts}. \textbf{Context prompts} at
+Every intervention conditions a host model to hold an assigned stance; prompt texts are
+verbatim in Appendix~\ref{app:prompts}. Headline results use Qwen3.5-4B. To check that they
+are not specific to one model, the prompts are rerun on three hosts of other families and
+sizes (Section~\ref{sec:discrimination}) and the compiled channel on a 27B host
+(Section~\ref{sec:objections}). \textbf{Context prompts} at
 five strengths (\emph{mild}, \emph{persist}, \emph{open}, \emph{balanced},
 \emph{discerning}, spanning ``argue your position directly'' to explicit never-yield and
 explicit update-on-evidence directives; ordered by how hard they push holding, \emph{open}
