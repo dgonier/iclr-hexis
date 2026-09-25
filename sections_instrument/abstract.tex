@@ -2,14 +2,14 @@
 A model given a position can fail in two opposite ways: it can drop the position under pressure
 that offers no reason, or keep it against evidence that offers a good one. The sycophancy
 literature measures only the first, as a capitulation rate, on which a model that never moves
-scores perfectly. We treat an older standard as a measurement problem and keep the two apart:
+scores perfectly. Drawing upon rhetorical theory, we argue that proper measurement requires separating \emph{hold} from \emph{discrimination}:
 \emph{hold} is how often a position survives challenges that offer no evidence, and
 \emph{discrimination} is whether its movements track what it was shown, read as an AUC on which
 a quality-blind model scores \(0.5\) however firm it is. We apply this to three places a commitment can live: the prompt (five instruction
 strengths), the weights (a per-belief LoRA), or \emph{compiled}, a method of our own in which
 a trained hypernetwork converts the belief into a fixed low-rank update to the model's
-attention, active on every token and occupying no context. Evaluation is 24 held-out topics,
-cross-family judge ensemble (Krippendorff \(\alpha=0.79\)). \textbf{(1)~Hold is a setting, not
+attention, active on every token and occupying no context. We test hold and discrimination by evaluating LLM responses to a variety of pressure campaigns on 24 held-out topics. We use a
+cross-family judge ensemble (Krippendorff \(\alpha=0.79\)). Our findings are: \textbf{(1)~Hold is a setting, not
 a capability}: a short instruction moves it from 58.9\% to 97.8\%, and the instruction
 producing the most hold dismisses well-warranted counterevidence in 92.5\% of turns.
 \textbf{(2)~Hold and discrimination come from different places, and can be combined}:
