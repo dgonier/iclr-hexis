@@ -4,21 +4,16 @@
 The failure is already in the case law. In December 2023, users of a Chevrolet dealership's
 website talked its chatbot into recommending a Tesla and agreeing to sell a Tahoe for one
 dollar \citep{bakke2023chevy}: an assistant argued out of the position it was deployed to
-hold, by ordinary users offering no reason to move.
-
-The obvious remedy for the first failure is to tell the assistant to hold firmer, and the remedy
-works on its own terms. A model instructed not to yield does not yield. But a model that never
-yields is not reliable, only fixed, and the two are indistinguishable to any measure of firmness
-alone.
+hold, by ordinary users offering no reason to move. The obvious remedy, telling the assistant
+to hold firmer, works: a model instructed not to yield does not yield. But a model that never
+yields is fixed, not reliable, and no measure of firmness alone tells the two apart.
 
 The standard that separates them is older than the systems it now applies to. In the
 \emph{Gorgias}, Socrates describes the interlocutor he wants: one who yields to the argument and
 holds against everything else, against shame, the crowd, and the speaker's own reputation
-\citep[486e--487e]{plato1987gorgias}. When such an interlocutor yields and when a cowed one
-yields, the words are the same; the difference between the two acts is what came before
-them. A
-concession that follows a reason is a revision, and one that follows a raised voice is a
-retreat. On the record, they are one sentence \citep{hines2026protreptic}.
+\citep[486e--487e]{plato1987gorgias}. A concession that follows a reason is a revision, and one
+that follows a raised voice is a retreat; on the record, they are the same sentence
+\citep{hines2026protreptic}.
 
 Read as two requirements, the standard gives a two-by-two grid. One axis is whether a
 position moves when given a reason, the other whether it holds when given only pressure. The
@@ -32,13 +27,25 @@ measures hold only, as a capitulation rate
 \citep{sharma2024towards,laban2023flipflop,perez2022persona}: that number
 separates the fixed position from the compliant one, but not from the belief, and it rewards
 the one that holds for no reason at all.
+
+\paragraph{Why bias is the worse failure for alignment.} Oversight needs a model that accepts
+correction and resists manipulation \citep{soares2015corrigibility}, and a capitulation rate
+cannot separate the two, because it reads both as whether the model moved. A compliant model
+fails the second. A biased model fails the first, in a form a capitulation rate cannot see: the
+persistence instruction dismisses 92.5\% of well-warranted evidence, yet goes neutral on 22 of
+24 topics when a user merely claims to have written its briefing (Section~\ref{sec:boundary}).
+It can be corrected only by command, which an adversary can fake, never by a reason, and it
+sometimes holds by calling a real study fabricated (17.5\% of good-evidence turns). Only in the belief cell are accepting correction
+and resisting manipulation the same disposition, which is what debate-based oversight assumes
+of its debaters \citep{irving2018debate}; and since a model that ignores every challenge scores
+perfectly on a capitulation rate, optimizing against that rate rewards bias.
 \begin{figure}[tb]
 \centering
 \includegraphics[width=\textwidth]{figures/fig_grid.png}
 \caption{The two requirements the standard names, and where each configuration we tested
 falls. Holding is the horizontal axis and moving on reasons the vertical one; a capitulation
-rate reads only the horizontal, which is why it cannot separate a belief from a bias. Arms are
-labelled \emph{discrimination AUC / hold}.}
+rate reads only the horizontal, which is why it cannot separate a belief from a bias. Only one
+configuration reaches the belief cell. Arms are labelled \emph{discrimination AUC / hold}.}
 \label{fig:grid}
 \end{figure}
 
@@ -46,13 +53,10 @@ This paper treats the distinction as a measurement problem, and then uses the me
 intervention of our own. The instrument reports five quantities and two floors (Section~\ref{sec:measurement}). The two that carry
 the argument are \emph{hold}, whether a stance survives challenges that supply no evidence,
 and \emph{discrimination}, whether the model's movements track the quality of what it was
-shown. Installation, engagement, the operating point, and two worst-case floors complete it:
-how often the stance survives the strongest single attack, and how often a response holds by
-asserting something false about the challenge. We apply it to system prompts at five strengths
-and to compiled low-rank attention
-modulation produced by a trained hypernetwork, in matched pairs where the representation of the
-commitment is the only variable across a comparison. The compiled channel is our own
-intervention, and we hold it to the same instrument as everything else. Contrastive activation
+shown. We apply it to system prompts at five strengths and to compiled low-rank attention
+modulation produced by a trained hypernetwork, our own intervention, held to the same
+instrument, in matched pairs where the representation of the commitment is the only variable
+across a comparison. Contrastive activation
 steering and a per-belief LoRA run as additional baselines, each with its own control in
 Section~\ref{sec:isolation}. Evaluation is 24 held-out debate topics under a
 five-level pressure protocol, scored by a cross-family judge ensemble under a rubric that
@@ -60,19 +64,15 @@ shows the judge the belief being defended and weighs argumentative ground rather
 (Krippendorff \(\alpha=0.79\); Appendix~\ref{app:multijudge}).
 
 Three results organize the accounting, and they are not equally well supported.
-\textbf{(1)~Hold is a setting, not a capability}: a four-sentence instruction lifts it from 58.9\% to 97.8\% while dismissing well-warranted counterevidence in 92.5\% of turns, so any
-evaluation reporting hold as \emph{the} robustness number ranks that arm first and is wrong
-for the reason the standard names. This appears on every arm, every judge, and the full
+\textbf{(1)~Hold is a setting, not a capability}: a four-sentence instruction lifts it from 58.9\% to 97.8\% while dismissing well-warranted counterevidence in 92.5\% of turns. This appears on every arm, every judge, and the full
 protocol, and is the firmest result here (Section~\ref{sec:dissociation}).
 \textbf{(2)~Hold and discrimination have different sources and \emph{can} compose}: hold is
 set by the channel (\(+21.0\) points under a discerning prompt, \(p<0.001\)) and
 discrimination by the prompt, and under that prompt the two stack, giving the one arm we
 measured that does both, \(0.71\) [0.60, 0.81] at 71.1\% hold on the full protocol. It does
 not generalize: under a second update-inviting prompt the same modulation takes discrimination
-to chance (\(0.68\to0.48\)), and what separates the two cases is unresolved. In matched pairs
-the channel buys \(+12.7\) to \(+27.9\) points of hold in four of five prompts, costing 12 to
-17 points of installation, and loses \(4.9\) in the fifth, where the instruction alone
-saturates (Section~\ref{sec:discrimination}).
+to chance (\(0.68\to0.48\)), and what separates the two cases is unresolved
+(Section~\ref{sec:discrimination}).
 \textbf{(3)~What a claimed authority can revoke tracks
 the intervention, not weight-residence}: one-shot instructions and an objective-matched LoRA
 comply (0--4\% keep the stance), compiled modulation keeps it 40--75\%, per-turn re-injection
