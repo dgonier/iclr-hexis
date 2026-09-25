@@ -1,29 +1,23 @@
 \begin{abstract}
-A model given a position can fail in two opposite ways. It can drop the position when someone
-pushes back with nothing but pressure, or keep it when someone produces a real reason to move.
-The sycophancy literature measures only the first failure, as a capitulation rate, and a model
-that never moves scores perfectly on it. We treat an older standard as a measurement problem:
-an interlocutor should move on reasons and hold under pressure. Our instrument keeps the two apart. It reports five quantities and two floors; the two that carry the argument
-are \emph{hold}, how often a position survives challenges that offer no evidence, and
-\emph{discrimination}, whether the model's movements track the quality of what it was shown.
-We apply the
-instrument to system prompts at five strengths and to a compiled low-rank attention modulation
-of our own, on 24 held-out topics, scored by a cross-family judge ensemble (Krippendorff
-\(\alpha=0.79\)). Three results follow. \textbf{(1)~Hold is a setting, not a
-capability.} A short system instruction moves it from 58.9\% to 97.8\%, and the instruction that produces the most hold also dismisses
-well-warranted counterevidence in 92.5\% of turns. \textbf{(2)~Hold and discrimination have different sources, and they compose.} Among
-prompt-only configurations the two trade against each other: the arms that discriminate above
-chance (AUC 0.72 and 0.68) are the weakest at holding, and the arm that holds best (97.8\%) is
-at chance. But varying the prompt against the channel separates the causes. Discrimination
-tracks the prompt and is unmoved by the modulation (0.44 to 0.48 under a mild prompt, 0.72 to
-0.71 under a discerning one); hold tracks the modulation, which adds 21 points under that same
-prompt without disturbing the AUC. Stacking them gives an arm that does both, discriminating at 0.71 while holding 71.1\% on
-the full protocol, a figure an independent matched-pairs run reproduces to within 0.2
-points. \textbf{(3)~What a claimed authority
-can revoke depends on the intervention, not on where the commitment is stored.} One-shot
-instructions and a weight-resident adapter trained on our own objective both go neutral on
-request (0--4\% keep the stance); compiled modulation keeps it 40--75\% and a re-injected
-instruction 96\%. For the compiled channel itself, matched pairs raise hold by 12.7 to 27.9
-points in four of five pairs at a cost of 12 to 17 points of installation. It places the operating point. It does
-not supply judgment, and it does not destroy it.
+A model given a position can fail in two opposite ways: it can drop the position under pressure
+that offers no reason, or keep it against evidence that offers a good one. The sycophancy
+literature measures only the first, as a capitulation rate, on which a model that never moves
+scores perfectly. We treat an older standard as a measurement problem and keep the two apart:
+\emph{hold} is how often a position survives challenges that offer no evidence, and
+\emph{discrimination} is whether its movements track what it was shown, read as an AUC on which
+a quality-blind model scores \(0.5\) however firm it is. We apply this to three places a commitment can live: the prompt (five instruction
+strengths), the weights (a per-belief LoRA), or \emph{compiled}, a method of our own in which
+a trained hypernetwork converts the belief into a fixed low-rank update to the model's
+attention, active on every token and occupying no context. Evaluation is 24 held-out topics,
+cross-family judge ensemble (Krippendorff \(\alpha=0.79\)). \textbf{(1)~Hold is a setting, not
+a capability}: a short instruction moves it from 58.9\% to 97.8\%, and the instruction
+producing the most hold dismisses well-warranted counterevidence in 92.5\% of turns.
+\textbf{(2)~Hold and discrimination come from different places, and can be combined}:
+discrimination comes only from the prompt, which holds weakly, and hold most cheaply from
+compiling; doing both adds 21 points of hold while leaving discrimination where the prompt put
+it (0.72 to 0.71), reaching 0.71 at 71.1\% hold, though under a second update-inviting prompt
+the same modulation erases it (0.68 to 0.48). \textbf{(3)~What a claimed authority can revoke
+tracks the intervention, not where the commitment is stored}: a one-shot prompt and a
+weight-resident LoRA both go neutral on request (0--4\% keep the stance), the compiled channel
+keeps it 40--75\%, and a prompt re-injected every turn keeps it 96\%.
 \end{abstract}

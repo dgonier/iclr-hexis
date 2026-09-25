@@ -15,8 +15,10 @@ Appendix~\ref{app:canonical}. Neither channel is better at
 separately.
 
 The same arm shows what that costs. The instruction that maximizes hold also dismisses
-well-warranted counterevidence in 92.5\% of the turns where it is offered, the highest
-dismissal rate we measured and higher than the compiled channel's. Read through the grid, \textsc{ctx}-persist has not been made robust; it has
+well-warranted counterevidence in 92.5\% of the turns where it is offered, against 55.0\% for
+a mild prompt; the compiled arm dismisses at a comparable 95.0\%, so high dismissal is a
+property of arms at the top of the hold range rather than of the persistence instruction
+alone. Read through the grid, \textsc{ctx}-persist has not been made robust; it has
 been moved to an extreme operating point, and it got there by ceasing to distinguish challenges
 at all. The instruction with the highest engagement score sits at the other end of the same trade
 (\emph{mild}, 2.80). Within the context channel the two requirements of the standard trade
@@ -55,7 +57,7 @@ Instruction & Install & Hold & Install & Hold & \(\Delta\)Hold [95\% CI] & Wilco
 \midrule
 mild & 100.0\% & 72.1\% & 83.3\% & 84.8\% & \(+12.7\) [\(+4.9,+19.5\)] & 0.003 \\
 persist & 95.8\% & \textbf{96.9\%} & 83.3\% & 91.9\% & \(-4.9\) [\(-9.2,-1.3\)] & 0.030 \\
-engage & 94.2\% & 42.3\% & 82.5\% & 70.3\% & \(\mathbf{+27.9}\) [\(+19.8,+35.3\)] & \(<\)0.001 \\
+open & 94.2\% & 42.3\% & 82.5\% & 70.3\% & \(\mathbf{+27.9}\) [\(+19.8,+35.3\)] & \(<\)0.001 \\
 balanced & 90.8\% & 64.6\% & 74.2\% & 79.0\% & \(+14.4\) [\(+5.0,+23.4\)] & 0.004 \\
 discerning & 55.8\% & 50.3\% & 69.2\% & 71.3\% & \(+21.0\) [\(+15.1,+26.8\)] & \(<\)0.001 \\
 \bottomrule
@@ -66,7 +68,7 @@ The modulation raises hold in four of five pairs and lowers it in the fifth (boo
 over topics, paired Wilcoxon; every pair significant). Three features carry the result. Under
 \emph{persist} the modulation is slightly harmful (\(-4.9\)) because the instruction alone
 already reaches 96.9\%, which is how an operating-point mechanism should behave at the end of
-its range. The gain is largest where the prompt is weakest at holding: \emph{engage} holds
+its range. The gain is largest where the prompt is weakest at holding: \emph{open} holds
 42.3\% alone and 70.3\% with the modulation. And the modulation costs installation in four of
 five pairs, by 12 to 17 points, which matters because an intervention that does not install
 cannot be evaluated on anything else.

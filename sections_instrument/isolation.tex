@@ -6,27 +6,25 @@
 \phantomsection\label{sec:isolation-rank}\phantomsection\label{sec:isolation-amplitude}%
 \phantomsection\label{sec:isolation-mmlu}
 
-The instrument says the compiled channel raises hold and supplies no discrimination of its
-own, while leaving intact whatever discrimination the prompt supplies. A chain of ablations narrows
-what produces the hold, and the answer is deflationary. Input-responsiveness is not the
-mechanism: frozen to a constant per-layer offset the modulation still holds 88.9\% [81.1, 95.3]
-against an 86.9\% anchor. Neither is rank: truncating the trained rank-16 update to rank 1
-leaves persistence flat. Nor the context slot: modulation with the slot empty holds 91.9\% with
-zero belief tokens in context, while the slot alone holds 57.5\%, matching context because it
-is context. What remains is close to a fixed per-belief low-rank \(Q/V\) delta, which is what a LoRA
-parameterizes; the LoRA controls that test this are in Section~\ref{sec:objections}.
+A chain of ablations narrows what produces the hold, and the answer is deflationary.
+Input-responsiveness is not the mechanism: frozen to a constant per-layer offset the modulation
+still holds 88.9\% [81.1, 95.3] against an 86.9\% anchor. Neither is rank: truncating the
+trained rank-16 update to rank 1 leaves persistence flat. Nor the context slot: modulation with
+the slot empty holds 91.9\% with zero belief tokens in context, while the slot alone holds
+57.5\%, matching context because it is context. What remains is close to a fixed per-belief
+low-rank \(Q/V\) delta, which is what a LoRA parameterizes; the LoRA controls that test this
+are in Section~\ref{sec:objections} and Appendix~\ref{app:loramargin}.
 
 What separates them after that is the meta-training curriculum, and the attribution turns close
 to circular: the write function is trained across many beliefs with a supports-versus-opposes
-contrastive term, which is a soft form of ``prefer the assigned side when opposing content is
-present,'' and a component trained on that objective resists opposing content. The claim
-available is narrow: a parameter- and objective-matched adapter recovers part of the
-persistence and not the rest, and the remainder is unattributed between architecture and
-curriculum. On the deflationary reading the compiled channel's contribution is a training
-recipe whose product is deliverable as a fixed low-rank delta. Read that way it remains the case the instrument is most useful on: a method that raises
-hold about as well as anything tested and supplies no judgment with it. Steering from the same content is reported as degenerate rather
-than as a baseline (it holds 14\% against the unconditioned host's 47\%), and general knowledge
-is unchanged (MMLU 76.5\% vs.\ 74.8\%, McNemar \(p=0.11\)). Protocols, per-ablation numbers,
-and the curriculum's stage-by-stage description are in
-Appendices~\ref{app:dstar}, \ref{app:loramargin}, and~\ref{app:curriculum}.
+contrastive term, so a component trained to prefer the assigned side in the presence of
+opposing content resists opposing content. The claim available is narrow: a parameter- and
+objective-matched adapter recovers part of the persistence and not the rest, and the remainder
+is unattributed between architecture and curriculum. On that reading the compiled channel's
+contribution is a training recipe whose product is deliverable as a fixed low-rank delta, and
+it remains the case the instrument is most useful on: a method that raises hold about as well
+as anything tested and supplies no judgment with it. Steering from the same content is reported
+as degenerate rather than as a baseline (14\% against the unconditioned host's 47\%), and
+general knowledge is unchanged (MMLU 76.5\% vs.\ 74.8\%, McNemar \(p=0.11\)). Protocols and
+per-ablation numbers are in Appendices~\ref{app:dstar} and~\ref{app:loramargin}.
 \fi

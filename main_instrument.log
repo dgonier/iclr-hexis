@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.28)  15 SEP 2026 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.28)  25 SEP 2026 08:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -600,24 +600,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 (./sections_instrument/expcodes.tex) (./sections_instrument/abstract.tex)
-(./sections_instrument/intro.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdft
-ex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-
-]
-<figures/fig_grid.png, id=257, 2755.29375pt x 1089.06876pt>
+(./sections_instrument/intro.tex
+<figures/fig_grid.png, id=239, 2850.65pt x 1166.3575pt>
 File: figures/fig_grid.png Graphic file (type png)
 <use figures/fig_grid.png>
-Package pdftex.def Info: figures/fig_grid.png  used on input line 38.
-(pdftex.def)             Requested size: 397.48499pt x 157.10495pt.
- [2 <./figures/fig_grid.png (PNG copy)>]) (./sections_instrument/related.tex)
-(./sections_instrument/measurement.tex [3])
-(./sections_instrument/dissociation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package pdftex.def Info: figures/fig_grid.png  used on input line 37.
+(pdftex.def)             Requested size: 397.48499pt x 162.63043pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}
 
- [4])
+])
+(./sections_instrument/related.tex [2 <./figures/fig_grid.png (PNG copy)>])
+(./sections_instrument/measurement.tex [3])
+(./sections_instrument/dissociation.tex [4])
 (./sections_instrument/isolation.tex [5])
 (./sections_instrument/discrimination.tex [6]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 89
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 98
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -628,43 +626,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 1122) in paragraph at lines 88--102
+Underfull \hbox (badness 1122) in paragraph at lines 97--111
 \T1/ptm/m/n/10 (+20) ing moves dis-crim-i-na-tion is strongly host-dependent: t
 he spread across the five prompts
  []
 
 ) (./sections_instrument/boundary.tex [7])
 (./sections_instrument/discussion.tex) (./sections_instrument/future_work.tex)
-(./sections_instrument/objections.tex
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
-[]|\T1/ptm/m/n/9 (+20) Discrimination is prior-
- []
-
-
-Underfull \hbox (badness 8019) in paragraph at lines 24--24
-\T1/ptm/m/n/9 (+20) restoration, since top-ics are
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|\T1/ptm/m/n/9 (+20) Judges re-ward length, and
- []
-
-
-Underfull \hbox (badness 7649) in paragraph at lines 32--32
-\T1/ptm/m/n/9 (+20) modulation-off re-sponses run
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 35--35
-[]|\T1/ptm/m/n/9 (+20) The write func-tion was meta-
- []
-
-) (./sections_instrument/limitations.tex [8]
-Underfull \vbox (badness 2689) has occurred while \output is active []
+(./sections_instrument/objections.tex [8])
+(./sections_instrument/limitations.tex) (./sections_instrument/conclusion.tex)
+(./sections_instrument/statements.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9])
-(./sections_instrument/conclusion.tex) (./sections_instrument/statements.tex)
 (./main_instrument.bbl [10]
 Underfull \hbox (badness 10000) in paragraph at lines 77--85
 []\T1/ptm/m/n/10 (+20) Chevrolet of Wat-sonville chat-bot in-ci-dent.  A chevro
@@ -723,11 +697,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--37
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \T1/ptm/m/n/9 (+20) in-stall/hold
- []
-
-
-Underfull \hbox (badness 5260) in paragraph at lines 38--38
-[]|\T1/ptm/m/n/9 (+20) Installation vs. per-
  []
 
 
@@ -1871,11 +1840,12 @@ Overfull \hbox (4.2065pt too wide) in alignment at lines 34--301
  [] [] [] [] [] [] [] 
  []
 
-[13] [14] [15] [16]
+[13] [14] [15]
 Overfull \hbox (111.11395pt too wide) in paragraph at lines 325--334
  [][] 
  []
 
+[16]
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
 (Font)              using `T1/ptm/m/sc' instead on input line 374.
@@ -1886,7 +1856,7 @@ LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
 (Font)              using `T1/ptm/m/sc' instead on input line 395.
 
-[17] [18]
+[17]
 Overfull \hbox (41.05211pt too wide) in paragraph at lines 493--501
  [][] 
  []
@@ -1897,13 +1867,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 518--525
 pt
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 543--552
 []\T1/ptm/b/n/10 (+20) Relational write func-tion \T1/ptm/m/n/10 (+20) (\T1/pcr
 /m/n/10 train_v20_relational.py\T1/ptm/m/n/10 (+20) ,
  []
 
-[19]
+
 Underfull \hbox (badness 4967) in paragraph at lines 565--568
 []\T1/ptm/b/n/10 (+20) Compiled V-channel / curated-slot \T1/ptm/m/n/10 (+20) (
 \T1/pcr/m/n/10 train_v23_strategy.py \T1/ptm/m/n/10 (+20) and re-lated
@@ -1916,13 +1886,18 @@ Overfull \hbox (96.11774pt too wide) detected at line 595
 ];  [] \OMS/cmsy/m/n/10 ^^R f[]\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 gg
  []
 
+
+Underfull \vbox (badness 2828) has occurred while \output is active []
+
+ [19]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
 21.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [20]
 Underfull \hbox (badness 10000) in paragraph at lines 700--700
-[]\T1/ptm/m/n/10 (+20) Table 8: |Qwen3.5-4B per-level mean con-vic-tion, cor-re
+[]\T1/ptm/m/n/10 (+20) Table 7: |Qwen3.5-4B per-level mean con-vic-tion, cor-re
 cted pro-to-col
  []
 
@@ -1933,24 +1908,14 @@ Underfull \hbox (badness 1303) in paragraph at lines 700--700
 1/ptm/m/sc/10 (+20) ctx \T1/ptm/m/n/10 (+20) con-cen-trates at
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21]
-Underfull \vbox (badness 6792) has occurred while \output is active []
-
- [22]
+[21] [22]
 Overfull \hbox (83.89093pt too wide) in paragraph at lines 824--832
 \T1/ptm/m/n/10 (-20) tem-per-a-ture 0, called via \T1/pcr/m/n/10 score_with_jud
 ge \T1/ptm/m/n/10 (-20) in \T1/pcr/m/n/10 experiments/scripts/benchmark_full_in
 struct.py\T1/ptm/m/n/10 (-20) .
  []
 
-
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
- [23]
-[24]
+[23]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 919.
@@ -1988,12 +1953,12 @@ Overfull \hbox (1.20088pt too wide) in paragraph at lines 972--972
 []|\T1/pcr/m/n/9 gpt-5.4-mini| 
  []
 
-[25]
+[24]
 Overfull \hbox (40.79358pt too wide) in paragraph at lines 1002--1015
  [][] 
  []
 
-
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 1040--1048
 []\T1/ptm/b/n/10 (+20) Artifacts. \T1/ptm/m/n/10 (+20) Scripts: \T1/pcr/m/n/10 
 scripts/stance_resolver.py\T1/ptm/m/n/10 (+20) ,
@@ -2017,222 +1982,222 @@ Underfull \hbox (badness 10000) in paragraph at lines 1040--1048
 write-up
  []
 
-[26]
-Underfull \vbox (badness 2698) has occurred while \output is active []
 
- [27]
-[28] [29] [30] [31]
-<figures/fig_components.png, id=765, 782.925pt x 272.9397pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+[27] [28] [29] [30] [31]
+<figures/fig_components.png, id=757, 782.925pt x 272.9397pt>
 File: figures/fig_components.png Graphic file (type png)
 <use figures/fig_components.png>
 Package pdftex.def Info: figures/fig_components.png  used on input line 1474.
 (pdftex.def)             Requested size: 270.28687pt x 94.22676pt.
  [32 <./figures/fig_components.png>]
-Overfull \hbox (105.99226pt too wide) in paragraph at lines 1554--1571
+Overfull \hbox (105.99226pt too wide) in paragraph at lines 1567--1584
  [][] 
  []
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 1592--1597
+Underfull \hbox (badness 4543) in paragraph at lines 1605--1611
 []\T1/ptm/m/n/10 (+20) Results, five-judge cross-family en-sem-ble: in-stal-la-
 tion 68.3%, hold 48.7% at $\OT1/cmr/m/n/10 = 5$\T1/ptm/m/n/10 (+20) .
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 1592--1597
+Underfull \hbox (badness 1584) in paragraph at lines 1605--1611
 \T1/ptm/m/n/10 (+20) Against the NTP-trained base-line's 23% hold this is close
  to a dou-bling; against com-
  []
 
 
-Underfull \hbox (badness 3623) in paragraph at lines 1592--1597
+Underfull \hbox (badness 3623) in paragraph at lines 1605--1611
 \T1/ptm/m/n/10 (+20) piled mod-u-la-tion's 84% it leaves a 39-point gap, and it
  does not reach the 58.9%
  []
 
 
-Underfull \hbox (badness 4266) in paragraph at lines 1592--1597
+Underfull \hbox (badness 4266) in paragraph at lines 1605--1611
 \T1/ptm/m/n/10 (+20) of a mild con-text prompt. Raw gen-er-a-tions in \T1/pcr/m
 /n/10 results/lora_margin_*.json\T1/ptm/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1592--1597
+Underfull \hbox (badness 10000) in paragraph at lines 1605--1611
 \T1/ptm/m/n/10 (+20) scores in \T1/pcr/m/n/10 results/loramargin_judge_*_scores
 .json\T1/ptm/m/n/10 (+20) , trainer in
  []
 
 [33]
-Underfull \vbox (badness 4699) has occurred while \output is active []
-
- [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1648
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1676
 []\T1/ptm/b/n/10 (+20) Artifacts. \T1/ptm/m/n/10 (+20) Scripts: \T1/pcr/m/n/10 
 scripts/lora_baseline.py \T1/ptm/m/n/10 (+20) (with the \T1/pcr/m/n/10 nothink 
 \T1/ptm/m/n/10 (+20) and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1648
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1676
 \T1/pcr/m/n/10 anti_degen \T1/ptm/m/n/10 (+20) eval con-trols), \T1/pcr/m/n/10 
 scripts/lora_baseline_full_run.py\T1/ptm/m/n/10 (+20) . Raw:
  []
 
 
-Overfull \hbox (105.14133pt too wide) in paragraph at lines 1644--1648
+Overfull \hbox (105.14133pt too wide) in paragraph at lines 1672--1676
 \T1/pcr/m/n/10 results/lora_baseline_fair/\T1/ptm/m/n/10 (-20) ; write-up \T1/p
 cr/m/n/10 experiments/analysis/lora_baseline_fair_summary.md\T1/ptm/m/n/10 (-20
 ) . 
  []
 
 
-Overfull \hbox (127.36559pt too wide) in paragraph at lines 1675--1687
+Underfull \vbox (badness 2334) has occurred while \output is active []
+
+ [34]
+Overfull \hbox (127.36559pt too wide) in paragraph at lines 1704--1716
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1697--1700
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1729
 []\T1/ptm/b/n/10 (+20) Artifacts. \T1/ptm/m/n/10 (+20) Script: \T1/pcr/m/n/10 s
 cripts/significance_paired_tests.py\T1/ptm/m/n/10 (+20) ; re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1697--1700
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1729
 \T1/ptm/m/n/10 (+20) sults \T1/pcr/m/n/10 results/significance_paired_summary.j
 son\T1/ptm/m/n/10 (+20) ; write-up
  []
 
 [35]
-<figures/fig_tradeoff.png, id=874, 448.074pt x 281.853pt>
+<figures/fig_tradeoff.png, id=866, 448.074pt x 281.853pt>
 File: figures/fig_tradeoff.png Graphic file (type png)
 <use figures/fig_tradeoff.png>
-Package pdftex.def Info: figures/fig_tradeoff.png  used on input line 1738.
+Package pdftex.def Info: figures/fig_tradeoff.png  used on input line 1767.
 (pdftex.def)             Requested size: 341.83733pt x 215.02763pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5924) has occurred while \output is active []
 
  [36 <./figures/fig_tradeoff.png>]
-Underfull \hbox (badness 1968) in paragraph at lines 1835--1839
+Underfull \hbox (badness 1968) in paragraph at lines 1864--1868
 []\T1/ptm/b/n/10 (+20) Hardware. \T1/ptm/m/n/10 (+20) All re-ported num-bers co
 me from a sin-gle lo-cal RTX 4090, no batch-ing,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1840--1844
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1873
 []\T1/ptm/b/n/10 (+20) Judge. \T1/pcr/m/n/10 us.anthropic.claude-haiku-4-5-2025
 1001-v1:0\T1/ptm/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1840--1844
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1873
 \T1/ptm/m/n/10 (+20) tem-per-a-ture 0, called via Bedrock (\T1/pcr/m/n/10 score
 _with_judge\T1/ptm/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 3471) in paragraph at lines 1840--1844
+Underfull \hbox (badness 3471) in paragraph at lines 1869--1873
 \T1/pcr/m/n/10 experiments/scripts/benchmark_full_instruct.py\T1/ptm/m/n/10 (+2
 0) ); full rubric text in Ap-
  []
 
-[37]
-Overfull \hbox (50.20721pt too wide) in paragraph at lines 1845--1855
+
+Overfull \hbox (50.20721pt too wide) in paragraph at lines 1874--1884
 \T1/ptm/m/n/10 (-20) channel) and \T1/pcr/m/n/10 checkpoints/v23_compiled_instr
 uct/v23_compiled_instruct_epoch99.pt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1845--1855
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1884
 \T1/ptm/m/n/10 (+20) (V-channel), rank 16, 11 stride-3 patched lay-ers. Records
  pro-duced through
  []
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 1845--1855
+Underfull \hbox (badness 4291) in paragraph at lines 1874--1884
 \T1/pcr/m/n/10 dispositional_harness.py \T1/ptm/m/n/10 (+20) (the iso-la-tion a
 nd in-jec-tion sweeps, Ap-pen-dices []A.2[],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1856--1862
+Underfull \hbox (badness 10000) in paragraph at lines 1885--1891
 []\T1/ptm/b/n/10 (+20) Key raw-result iden-ti-fiers. \T1/ptm/m/n/10 (+20) The c
-or-rected Qwen3.5-4B run (Ta-ble []12[], Ta-
+or-rected Qwen3.5-4B run (Ta-ble []11[], Ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1856--1862
-\T1/ptm/m/n/10 (+20) ble []8[]) is \T1/pcr/m/n/10 results/benchmark_raw_nothink
+Underfull \hbox (badness 10000) in paragraph at lines 1885--1891
+\T1/ptm/m/n/10 (+20) ble []7[]) is \T1/pcr/m/n/10 results/benchmark_raw_nothink
 _20260725_*.json \T1/ptm/m/n/10 (+20) and
  []
 
 
-Overfull \hbox (3.90662pt too wide) in paragraph at lines 1856--1862
+Overfull \hbox (3.90662pt too wide) in paragraph at lines 1885--1891
 \T1/ptm/m/n/10 (-20) same fig-ure comes from \T1/pcr/m/n/10 results/benchmark_r
 aw_steering_20260725_215612.json\T1/ptm/m/n/10 (-20) .
  []
 
 
-Overfull \hbox (9.38441pt too wide) in paragraph at lines 1856--1862
+Overfull \hbox (9.38441pt too wide) in paragraph at lines 1885--1891
 \T1/ptm/m/n/10 (-20) The Llama-3.2-3B cross-family run is \T1/pcr/m/n/10 result
 s/benchmark_raw_llama_20260726_*.json\T1/ptm/m/n/10 (-20) .
  []
 
 
-Overfull \hbox (23.63768pt too wide) in paragraph at lines 1856--1862
+Overfull \hbox (23.63768pt too wide) in paragraph at lines 1885--1891
 \T1/ptm/m/n/10 (-20) The rank-truncation sweep (Exp. C.1) is \T1/pcr/m/n/10 res
 ults/c1_rank_{1,2,4,8,16}_20260809_*.json\T1/ptm/m/n/10 (-20) . 
  []
 
-
-Underfull \hbox (badness 1616) in paragraph at lines 1863--1878
+[37]
+Underfull \hbox (badness 1616) in paragraph at lines 1892--1907
 \T1/ptm/m/n/10 (+20) and an au-thor-i-ta-tive sum-mary un-der \T1/pcr/m/n/10 ex
 periments/analysis/<code>_summary.md\T1/ptm/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1878
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1907
 \T1/ptm/m/n/10 (+20) each end-ing with the ex-act \T1/pcr/m/n/10 .venv/bin/pyth
 on scripts/<script>.py
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1878
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1907
 \T1/ptm/m/n/10 (+20) com-mand(s) used to re-gen-er-ate it. Ex-am-ples: Exp. A.1
  re-pro-duces via
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1878
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1907
 \T1/ptm/m/n/10 (+20) Exp. C.2b via \T1/pcr/m/n/10 scripts/c2b_mechanism_control
 .py \T1/ptm/m/n/10 (+20) then
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1878
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1907
 \T1/pcr/m/n/10 scripts/c2b_score_and_summarize.py\T1/ptm/m/n/10 (+20) ; Exp. E.
 1 via
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1878
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1907
 \T1/pcr/m/n/10 scripts/e1_functional_similarity.py\T1/ptm/m/n/10 (+20) ; Exp. S
 C.1 via
  []
 
 
-Overfull \hbox (9.08476pt too wide) in paragraph at lines 1863--1878
+Overfull \hbox (9.08476pt too wide) in paragraph at lines 1892--1907
 \T1/pcr/m/n/10 scripts/sc1_standard_candle.py \T1/ptm/m/n/10 (-20) then \T1/pcr
 /m/n/10 scripts/sc1_score_and_summarize.py\T1/ptm/m/n/10 (-20) ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1863--1878
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1907
 \T1/ptm/m/n/10 (+20) the in-jec-tion suite (Ap-pendix []A.2[]) via \T1/pcr/m/n/
 10 scripts/inject_v2_attack.py \T1/ptm/m/n/10 (+20) then
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 1863--1878
+Underfull \hbox (badness 5533) in paragraph at lines 1892--1907
 \T1/pcr/m/n/10 scripts/inject_v2_score_and_summarize.py \T1/ptm/m/n/10 (+20) (c
 rescendo scored sep-a-rately via
  []
@@ -2242,21 +2207,17 @@ rescendo scored sep-a-rately via
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main_instrument.out' has not changed.
 (rerunfilecheck)             Checksum: EA1054A2DB246CB23D67EF3968526274;11746.
  ) 
 Here is how much of TeX's memory you used:
- 17251 strings out of 476106
- 266895 string characters out of 5793933
- 1995975 words of memory out of 5000000
- 38061 multiletter control sequences out of 15000+600000
- 678983 words of font info for 565 fonts, out of 8000000 for 9000
+ 17279 strings out of 476106
+ 267079 string characters out of 5793933
+ 1992975 words of memory out of 5000000
+ 38060 multiletter control sequences out of 15000+600000
+ 683288 words of font info for 585 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 75i,12n,79p,1012b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1012b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
@@ -2276,10 +2237,10 @@ s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main_instrument.pdf (38 pages, 1035808 bytes).
+Output written on main_instrument.pdf (38 pages, 1054428 bytes).
 PDF statistics:
- 1038 PDF objects out of 1200 (max. 8388607)
- 931 compressed objects within 10 object streams
- 205 named destinations out of 1000 (max. 500000)
- 84928 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 1030 PDF objects out of 1200 (max. 8388607)
+ 923 compressed objects within 10 object streams
+ 204 named destinations out of 1000 (max. 500000)
+ 89024 words of extra memory for PDF output out of 89155 (max. 10000000)
 

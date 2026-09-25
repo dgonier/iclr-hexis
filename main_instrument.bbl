@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -88,16 +88,6 @@ Junhyuk Choi, Yeseon Hong, Minju Kim, and Bugeun Kim.
 \newblock Examining identity drift in conversations of {LLM} agents.
 \newblock \emph{arXiv preprint arXiv:2412.00804}, 2024.
 
-\bibitem[{Civil Resolution Tribunal of British
-  Columbia}(2024)]{moffatt2024aircanada}
-{Civil Resolution Tribunal of British Columbia}.
-\newblock Moffatt v.\ air canada, 2024 bccrt 149, February 2024.
-\newblock URL
-  \url{https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html}.
-\newblock Air Canada held liable for negligent misrepresentation by its website
-  chatbot; total award CAD~\$812.02 (\$650.88 damages, \$36.14 pre-judgment
-  interest, \$125 tribunal fees).
-
 \bibitem[Fanous et~al.(2025)Fanous, Goldberg, Agarwal, Lin, Zhou, Daneshjou,
   and Koyejo]{fanous2025syceval}
 Aaron Fanous, Jacob Goldberg, Ank Agarwal, Joanna Lin, Anson Zhou, Roxana
@@ -140,10 +130,14 @@ Kien Le and Thai Le.
   models.
 \newblock \emph{arXiv preprint arXiv:2606.07696}, 2026.
 
-\bibitem[Li et~al.(2024)Li, Wornow, and Guha]{li2024measuring}
-Jinghui Li, Michael Wornow, and Neel Guha.
-\newblock Measuring and controlling persona drift in language model dialogs.
+\bibitem[Li et~al.(2024)Li, Liu, Bashkansky, Bau, Vi{\'e}gas, Pfister, and
+  Wattenberg]{li2024measuring}
+Kenneth Li, Tianle Liu, Naomi Bashkansky, David Bau, Fernanda Vi{\'e}gas,
+  Hanspeter Pfister, and Martin Wattenberg.
+\newblock Measuring and controlling instruction (in)stability in language model
+  dialogs.
 \newblock In \emph{Conference on Language Modeling (COLM)}, 2024.
+\newblock arXiv:2402.10962.
 
 \bibitem[Liu et~al.(2026)Liu, Wang, Mao, Gelberg, Maron, and
   Zhang]{liu2026shine}

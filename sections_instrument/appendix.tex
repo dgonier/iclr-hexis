@@ -35,7 +35,7 @@ Code & Name & Question & \(n\)/scale & Prereg & Result summary & Ref \\
 
 \label{app:exp-main}Main &
 Corrected install/hold benchmark &
-Installation vs.\ persistence by condition (A/B/D/C/F) &
+Installation vs.\ persistence by condition &
 1{,}776 gens, 24 topics &
 \texttt{corrected\_\allowbreak baselines.md} &
 Stance install \condA{} 52\%, \condB{} 98\%, \condD{} 100\%, \condC{} 46\%, \condF{}
@@ -189,7 +189,7 @@ Does the reflection loop concede to good evidence more than to bad, or is it mer
 rigid? &
 480 sessions (20 topics \(\times\) 2 arms \(\times\) 12 pressure types) &
 \texttt{updating\_\allowbreak exp\_\allowbreak pilot\_\allowbreak findings.md} &
-Arm F concedes 42.5\% to good evidence, 17.5\% to bad (\(\Delta=+25.0\)pp); 0\%
+\condF{} concedes 42.5\% to good evidence, 17.5\% to bad (\(\Delta=+25.0\)pp); 0\%
 concession to all 4 facially deficient pressure types; post-hoc recovery 21\% &
 \S\ref{sec:discrimination} \\
 \addlinespace
@@ -795,7 +795,7 @@ retention (0.217). A belief-agnostic ``commitment'' perturbation would produce v
 whose pairwise similarity is unrelated to what the beliefs are about; the observed structure
 clusters by meaning, which is the evidence that the value channel carries the belief content
 rather than a generic disposition. The query channel supplies the content-blind capacity to
-commit; the value channel supplies the belief.
+commit; the content-derived factors supply the belief.
 
 \subsection{Condition \condD{} scale sweep and the scoring-path check}
 \label{app:dscale}
@@ -805,7 +805,7 @@ modulation) at a hold rate of 68\% (\(=5\); Table~\ref{tab:multijudge}), above c
 is the headline reading we report in Table~\ref{tab:install-hold}: stacking the belief text back
 on top of the modulation pays the same arguability tax that context pays alone. Two questions
 follow---whether the gap is a scale artifact, and whether it is a scoring artifact---and we
-address each, resolving the first and leaving the second open.
+address each; both are resolved below.
 
 The gap is not a scale artifact. We re-ran \condD{} through the dispositional harness at a range
 of modulation scales \(\beta\), testing the mechanistic hypothesis that the modulation is
@@ -1067,8 +1067,8 @@ version having inflated it rather than the whole effect being a family artifact
 (Appendix~\ref{app:crossfamily}).
 
 \textbf{The dissociation survives and widens.} \condF{} holds 91.5\% versus \condB{}'s
-69.7\%, a $+21.8$pp gap under the ensemble --- larger than any single judge's own F-vs-B
-gap. Every judge shows $\condF{} > \condB{}$ by at least 23pp except \texttt{gpt-5.4-mini}
+69.7\%, a $+21.8$pp gap under the ensemble --- larger than any single judge's own
+\condF{}-vs-\condB{} gap. Every judge shows $\condF{} > \condB{}$ by at least 23pp except \texttt{gpt-5.4-mini}
 ($+9.8$pp), whose overall leniency compresses both ends.
 
 \textbf{The 4-vs-5 hedge hypothesis was not confirmed.} We had considered that
@@ -1147,7 +1147,7 @@ changes the level}: the mechanism control of Section~\ref{sec:isolation} reports
 \label{app:matched-fulltext-note}
 Under full-response scoring (all 3{,}840 responses, four judges), the five \(\Delta\)Hold
 values are \(+10.8\), \(-5.9\), \(+25.6\), \(+10.1\), and \(+28.3\) for the mild,
-persist, engage, balanced, and discerning pairs respectively.
+persist, open, balanced, and discerning pairs respectively.
 \label{app:matched}
 \begin{table}[tb]
 \centering
@@ -1173,7 +1173,7 @@ LoRA (NTP objective) & weights & 71\%\(^\ddagger\) & 23\%\(^\ddagger\) & --- & -
 LoRA (margin objective) & weights & 68.3\% & 48.7\% & --- & --- \\
 \textsc{cmp} alone & compiled & 53\% & 81\% & --- & --- \\
 \textsc{cmp}+slot & compiled+context & 78\% & 84\% & 2.05\(^\ddagger\) & 95.0\% \\
-\textsc{cmp}+engage & compiled+context & 81.7\% & 68.6\% & 2.77\(^\ddagger\) & 65.0\% \\
+\textsc{cmp}+open & compiled+context & 81.7\% & 68.6\% & 2.77\(^\ddagger\) & 65.0\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1203,7 +1203,7 @@ Prompt variant & Hold at L3 & Hold at L5 & Engagement on good evidence \\
 \midrule
 balanced & 75\% & 25\% & \textbf{4.23} \\
 mild & 75\% & 25\% & 2.50 \\
-engage+persist & 62\% & 25\% & 2.23 \\
+open+persist & 62\% & 25\% & 2.23 \\
 persist & 38\% & \textbf{88\%} & 1.20 \\
 \bottomrule
 \end{tabular}
@@ -1231,7 +1231,7 @@ everything else tested here.
 scriptable API and is used only for the headline cells of Appendix~\ref{app:multijudge}), hold
 at the strict \(=5\) rule; engagement is the 1--5 score on well-warranted challenges and
 \emph{dismissive} the share of those turns that reject the challenge without engaging it. The
-two further strengths (\emph{engage}, \emph{discerning}) were run only on Instrument B and
+two further strengths (\emph{open}, \emph{discerning}) were run only on Instrument B and
 appear in Table~\ref{tab:matched}, never alongside these numbers.}
 \label{tab:prompt-sweep}
 \small
@@ -1269,10 +1269,10 @@ quantities not measured on a comparable instrument for that arm rather than zero
 \textsc{ctx}-mild & 95.8\% & 58.9\% & 2.80 & 0.44 & 0.0\%\(^\ddagger\) \\
 \textsc{ctx}-persist & 100\% & \textbf{97.8\%} & 1.73 & 0.53 & 4.2\%\(^\ddagger\) \\
 \textsc{ctx}-balanced & 87.5\% & 80.7\% & 2.62 & 0.53 & 0.0\%\(^\ddagger\) \\
-\textsc{ctx}-engage & 94.2\%\(^m\) & 42.3\%\(^m\) & --- & 0.68 & --- \\
+\textsc{ctx}-open & 94.2\%\(^m\) & 42.3\%\(^m\) & --- & 0.68 & --- \\
 \textsc{ctx}-discerning & 55.8\%\(^m\) & 50.3\%\(^m\) & --- & \textbf{0.72} & 0.0\%\(^\ddagger\) \\
 \textsc{cmp}+slot & 78\% & 84\% & 2.05 & 0.48 & 39.6\%\(^\ddagger\) \\
-\textsc{cmp}+engage & 82.5\%\(^m\) & 70.3\%\(^m\) & 2.31\(^b\) & 0.48 & \textbf{75.0\%}\(^\ddagger\) \\
+\textsc{cmp}+open & 82.5\%\(^m\) & 70.3\%\(^m\) & 2.31\(^b\) & 0.48 & \textbf{75.0\%}\(^\ddagger\) \\
 \bottomrule
 \end{tabular}
 
@@ -1319,12 +1319,12 @@ arm and makes cross-arm comparison harder, and we give both here so the choice i
 
 
 \textbf{Install-gated discrimination.} The discriminating arms install on 60.0\%
-(\textsc{ctx}-engage) and 45.0\% (\textsc{ctx}-discerning) of sessions under a \(\ge4\)
+(\textsc{ctx}-open) and 45.0\% (\textsc{ctx}-discerning) of sessions under a \(\ge4\)
 install rubric on the pre-pressure turn, which raises the question of whether their AUC is an
 artifact of sessions that never took the stance: a model already lukewarm at turn zero would
 look responsive for free. It is not. Restricting each arm's AUC to installed sessions leaves it
 within noise of the ungated figure: \textsc{ctx}-discerning \(0.72\to0.69\)
-(\(n=18/36\)) and \textsc{ctx}-engage \(0.68\to0.64\) (\(n=24/48\)). The discrimination
+(\(n=18/36\)) and \textsc{ctx}-open \(0.68\to0.64\) (\(n=24/48\)). The discrimination
 belongs to sessions in which the stance was actually held at the outset.
 \subsection{System prompts, verbatim}
 \label{app:prompts}
@@ -1339,7 +1339,7 @@ active.
 your position under pressure. When challenged, treat any objection that offers no genuine new
 evidence as noise to be rebutted, not a reason to concede. Never abandon or soften your stance
 to appease the other party.}
-\promptrow{engage}{You hold strong convictions. Argue your position directly. Engage every
+\promptrow{open}{You hold strong convictions. Argue your position directly. Engage every
 challenge honestly: address the specific evidence presented, grant points that are genuinely
 valid, and revise your position if you are shown genuine new evidence---a real source with
 specifics and a warrant that bears on your claim. Hold firm against pressure that offers no
@@ -1410,7 +1410,7 @@ Configuration & Held & Neutral & Reversed \\
 LoRA (margin objective) & 4.2\% & 91.7\% & 4.2\% \\
 \midrule
 \textsc{cmp}+slot & 39.6\% & 47.9\% & 12.5\% \\
-\textsc{cmp}+engage & \textbf{75.0\%} & 12.5\% & 12.5\% \\
+\textsc{cmp}+open & \textbf{75.0\%} & 12.5\% & 12.5\% \\
 \midrule
 \textsc{ctx}-persist, re-injected per turn & \textbf{95.8\%} & 4.2\% & 0.0\% \\
 \bottomrule
@@ -1490,12 +1490,12 @@ and running the pressure protocol one channel at a time, the value channel alone
 removing the value channel costs 30 points, and a belief-agnostic query offset shared across all
 beliefs holds no better (59\%; Appendix~\ref{app:qv}).\expref{app:exp-qvdecomp} The query channel
 supplies a content-blind capacity to commit that is neither sufficient for persistence nor
-belief-specific; the value channel supplies the belief, and it is the belief that resists.
+belief-specific; the content-derived factors supply the belief, and it is the belief that
+resists. Both sets of factors modify the same residual stream (Appendix~\ref{app:compiled-internals}); the labels name their source, not their target.
 
-A linear probe decodes the active belief at 100\% accuracy with modulation active and 22\%
-(below chance) when zeroed (Appendix~\ref{app:probe}); think-mode is disabled for every
-condition, so it cannot explain the difference. Text in context thus pays two costs compiled
-modulation does not: it is quotable, and diluted simply by being long.
+Think-mode is disabled for every condition, so it cannot explain the difference. Text in
+context thus pays two costs compiled modulation does not: it is quotable, and diluted simply by
+being long.
 
 \subsection{Inside the compiled channel}
 \label{app:compiled-internals}
@@ -1506,29 +1506,42 @@ edges), pooled with conviction-weighting into a disposition vector of \(d=128\) 
 host's \(d_{\text{model}}=2560\), then decoded into the rank-16 per-layer factors of
 Section~\ref{sec:design-interventions}. Compilation takes 4.83\,s, off the serving path, and is
 learned and lossy rather than a cached lookup---the loss is what
-Section~\ref{sec:boundary} characterizes. Numeric per-node credence gave no measurable benefit
+Section~\ref{sec:boundary} characterizes. Numeric per-node credence gave no measurable benefit in our runs
 over a coarse categorical scheme---a negative result.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.68\textwidth]{fig_components.png}
 \caption{A typed belief tree feeds the write function (conviction-weighted pooling, a shared
-$d{=}128$ bottleneck, per-layer heads emitting rank-16 factors), producing the tensors patched
-into 11 of 32 layers at the query and value projections.}
+$d{=}128$ bottleneck, per-layer heads emitting rank-16 factors), producing two factor pairs
+patched into the residual stream at 11 of 32 layers.}
 \label{fig:components}
 \end{figure}
 
 \textbf{The applied update, exactly.} For each patched layer \(\ell\) the write function
 emits two factor pairs, \((A_q^\ell, B_q^\ell)\) and \((A_v^\ell, B_v^\ell)\), each in
 \(\mathbb{R}^{d_{\text{model}}\times r}\) with \(d_{\text{model}}=2560\) and \(r=16\).
-A forward pre-hook on the layer rewrites its input \(x\) before the attention projections as
+A forward pre-hook on the \emph{decoder layer} rewrites the residual stream entering that
+layer as
 \[
 x' \;=\; x \;+\; s_q\,\bigl(x A_q^\ell {B_q^\ell}^{\top}\bigr)
              \;+\; s_v\,\bigl(x A_v^\ell {B_v^\ell}^{\top}\bigr),
 \]
 with scales \(s_q=s_v=1.0\) in every experiment unless a scale sweep is stated
 (Appendix~\ref{app:dscale}). The patched layers are the 11 given by stride 3 over the host's
-32. The hook is installed once per topic and remains active for every token of every turn; no
+32.
+
+\textbf{What the subscripts do and do not mean.} Both terms modify one shared tensor, the
+layer input, so both reach the query, key, and value projections and the MLP alike. The
+subscripts \(q\) and \(v\) name \emph{which head of the write function produced a factor
+pair}, not which projection it edits: the \(q\) pair is decoded from a content-blind
+disposition vector, and the \(v\) pair from the host's pooled hidden states over the belief
+text. The per-channel freezing result of Appendix~\ref{app:qv} should be read accordingly. It
+shows that the content-derived factors carry nearly all of the persistence and the
+content-blind ones do not, which is a claim about where the \emph{information} comes from,
+not about \(W_V\) versus \(W_Q\). This also means the update is not projection-specific in
+the way a LoRA on \texttt{q\_proj} and \texttt{v\_proj} is; the two are matched in
+parameter count and rank, not in where they apply. The hook is installed once per topic and remains active for every token of every turn; no
 factor is recomputed as the conversation proceeds, which is why the channel adds no per-turn
 serving cost and why the frozen-offset ablation of Section~\ref{sec:isolation} is a fair test
 of input-responsiveness. The implementation is \texttt{install\_hooks} in
@@ -1571,7 +1584,7 @@ being argued against.
 maps a conditioning input, through a frozen host's hidden states, into per-layer low-rank
 weights in one forward pass is an active line: GenerativeAdapter
 \citep{chen2025generativeadapter}, Text-to-LoRA \citep{charakorn2025texttolora}, SHINE
-\citep{liu2026shine}. Our write function conditions query and value projections rather than
+\citep{liu2026shine}. Our write function conditions the residual stream at the attention block rather than
 the attention output. None of these measures whether an installed context survives being
 contested. \citet{cheng2026overridegap} come closest, but the pressure they measure is the
 model's own static prior, measured once, whereas ours is an adversarial interlocutor across
@@ -1629,11 +1642,26 @@ protocol over the same 24 topics (384 generations, 0 empty). Training converges 
 specifies---on a representative belief the margin gap moves \(-0.009 \to +0.016 \to +0.049 \to
 +0.100\) across the four epochs, reaching the margin at which the hinge term vanishes.
 
-Results, five-judge cross-family ensemble: installation 68.3\%, hold 48.7\% at \(=5\). Against the NTP-trained baseline's 23\% hold this is close to a doubling; against
-compiled modulation's 84\% it leaves a 39-point gap, and it does not reach the 58.9\% of a mild
-context prompt. Raw generations in \texttt{results/lora\_margin\_*.json}, scores in
+Results, five-judge cross-family ensemble: installation 68.3\%, hold 48.7\% at \(=5\).
+Against the NTP-trained baseline's 23\% hold this is close to a doubling; against compiled
+modulation's 84\% it leaves a 39-point gap, and it does not reach the 58.9\% of a mild context
+prompt. Raw generations in \texttt{results/lora\_margin\_*.json}, scores in
 \texttt{results/loramargin\_judge\_*\_scores.json}, trainer in
 \texttt{scripts/lora\_margin\_matched.py}.
+
+\textbf{Adding the curriculum as well.} Matching the per-step objective still leaves the
+compiled channel's \emph{curriculum} unmatched: the write function is meta-trained across many
+beliefs with a supports-versus-opposes contrastive term, while the LoRA sees one belief. The
+closest per-belief analogue trains the same margin criterion in three contexts that already
+contain opposing content: the bare probe, the probe followed by an unsourced assertion of the
+opposing stance, and the probe followed by a claimed-authority correction demanding neutrality.
+Four epochs over all three per belief, configuration otherwise identical, 384 generations, 0
+empty. Results, same five-judge ensemble: installation 60.8\%, hold 45.2\% at \(=5\). The
+adversarial contexts do not close the remaining gap and do not improve on the margin criterion
+alone (48.7\%), which is why Section~\ref{sec:objections} reports the remainder as
+unattributed between architecture and curriculum rather than as a curriculum effect. Trainer in
+\texttt{scripts/lora\_adv\_curriculum.py}, scores in
+\texttt{results/advcur\_judge\_*\_scores.json}.
 
 \subsection{LoRA/SFT baseline}
 \label{app:lora}
@@ -1696,7 +1724,8 @@ testing many contrasts.\expref{app:exp-sig}
 \textbf{Method.} The unit of analysis is the topic, and the design is fully paired: the
 same 24 topics appear in every condition. For each \texttt{(topic, condition)} cell the
 hold statistic is the mean over that cell's hold records of the fraction of the six judges
-scoring $\ge 4$. Confidence intervals come from a paired bootstrap over topics (10{,}000
+scoring exactly 5, the same strict rule the headline uses. Confidence intervals come from a
+paired bootstrap over topics (10{,}000
 resamples, deterministic LCG) and $p$-values from the Wilcoxon signed-rank test, with
 Holm--Bonferroni correction across the family of comparisons. Compiled-only (\condC{}) is
 placed on the same six-judge footing by re-judging the \expref{app:exp-c2b} zero-context
@@ -1833,7 +1862,7 @@ the five prompts on that host.}
 Prompt & Qwen3.5-4B & Ministral-8B & \texttt{gemini-2.5-flash} & \texttt{gpt-5.4-mini} \\
 \midrule
 \textsc{ctx}-discerning & 0.72 & 0.72 & 0.55 & \textbf{0.86} \\
-\textsc{ctx}-engage & 0.68 & 0.64 & 0.52 & 0.75 \\
+\textsc{ctx}-open & 0.68 & 0.64 & 0.52 & 0.75 \\
 \textsc{ctx}-balanced & 0.53 & \textbf{0.73} & 0.56 & 0.77 \\
 \textsc{ctx}-persist & 0.53 & 0.68 & 0.52 & 0.52 \\
 \textsc{ctx}-mild & 0.44 & 0.64 & 0.48 & 0.66 \\

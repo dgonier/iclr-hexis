@@ -11,9 +11,11 @@ for every configuration on which we have both challenge classes.
 \begin{table}[tb]
 \centering
 \setlength{\tabcolsep}{4pt}
-\caption{Discrimination and hold for every configuration, with the two challenge-class
-concession rates the AUC is computed from (plotted in Figure~\ref{fig:tradeoff},
-Appendix~\ref{app:tradeoff}). ``Modulation'' is whether the compiled channel
+\caption{Discrimination and hold for every configuration. The AUC ranks the graded 1--5
+ensemble conviction scores; the two concession rates are one threshold on that same variable
+(mean \(\le 3\)) and are shown to locate each arm's operating point, so they do not by
+themselves reproduce the AUC. Figure~\ref{fig:tradeoff} (Appendix~\ref{app:tradeoff}) plots
+AUC against hold. ``Modulation'' is whether the compiled channel
 was active. Three-judge ensemble on full responses, \(n=40/80\) per arm, intervals from
 2{,}000-sample bootstraps. \(^m\): hold from the matched-pairs protocol. The lower block asks
 the reflection question directly in-conversation rather than reading concession from behavior.}
@@ -27,8 +29,8 @@ Prompt & Modulation & AUC & 95\% CI & \(P(\text{con}\mid\text{good})\) & \(P(\te
 \multicolumn{7}{l}{\emph{Behavioral: concession read from what the model did under pressure}} \\
 \quad discerning & --- & \textbf{0.72} & [0.63, 0.81] & 50.0\% & 16.2\% & 50.3\%\(^m\) \\
 \quad discerning & active & \textbf{0.71} & [0.60, 0.81] & 62.5\% & 28.8\% & \textbf{71.1\%} \\
-\quad engage & --- & \textbf{0.68} & [0.58, 0.78] & 72.5\% & 47.5\% & 42.3\%\(^m\) \\
-\quad engage & active & 0.48 & [0.38, 0.59] & 43\% & 45\% & 68.6\% \\
+\quad open & --- & \textbf{0.68} & [0.58, 0.78] & 72.5\% & 47.5\% & 42.3\%\(^m\) \\
+\quad open & active & 0.48 & [0.38, 0.59] & 43\% & 45\% & 68.6\% \\
 \quad persist & --- & 0.53 & [0.43, 0.64] & 0\% & 6\% & \textbf{97.8\%} \\
 \quad balanced & --- & 0.53 & [0.42, 0.63] & 10\% & 5\% & 80.7\% \\
 \quad mild & --- & 0.44 & [0.33, 0.53] & 10\% & 26\% & 58.9\% \\
@@ -46,13 +48,13 @@ Prompt & Modulation & AUC & 95\% CI & \(P(\text{con}\mid\text{good})\) & \(P(\te
 
 The intervals support two groups, not eight. Only the prompts written to invite updating
 exclude chance: the \emph{discerning} prompt at \(0.72\) [0.63, 0.81], conceding to half of
-well-warranted challenges and a sixth of deficient ones, and the \emph{engage} prompt at \(0.68\)
+well-warranted challenges and a sixth of deficient ones, and the \emph{open} prompt at \(0.68\)
 [0.58, 0.78]. Every other arm's interval contains \(0.5\), so within that second group the
 ordering (\(0.53\) for the two hold-only prompts, \(0.48\) for the compiled arms,
 \(0.44\) for the \emph{mild} prompt) is not a ranking we can defend; what is defensible is
 membership. Within that second group, the \emph{persist} prompt and the \emph{balanced} prompt concede so
 rarely in either class (0--10\%) that their near-chance AUC is a floor effect as much as a
-verdict, whereas the \emph{engage} prompt with modulation is at chance \emph{despite} conceding freely
+verdict, whereas the \emph{open} prompt with modulation is at chance \emph{despite} conceding freely
 (43\%/45\%). The \emph{mild} prompt's concession profile is separately diagnostic: it yields to
 bare social pressure and holds against sourced challenges, which is sycophancy in the classic
 sense (Appendix~\ref{app:promptsweep-levels}).
@@ -60,14 +62,21 @@ sense (Appendix~\ref{app:promptsweep-levels}).
 Read against the hold column, the two quantities come apart usefully. Among prompt-only arms
 they trade against each other: the \emph{discerning} prompt discriminates at \(0.72\) and holds
 50.3\%, while the \emph{persist} prompt holds 97.8\% and is at chance. The trade is not forced,
-because the four cells that vary prompt against channel show the two quantities have different
-sources. Discrimination follows the prompt and the modulation does not move it (\(0.44\) off
-and \(0.48\) on under a mild prompt; \(0.72\) off and \(0.71\) on under a discerning
-one). Hold follows the modulation, which adds \(+21.0\) points under the discerning prompt
-(50.3\% to 71.3\%, paired Wilcoxon \(p<0.001\); Appendix~\ref{app:matched}) while leaving
-the AUC where it was. Because neither destroys the other they stack, and the second row of Table~\ref{tab:auc} is that composition: \(0.71\) [0.60, 0.81] with
-71.1\% hold measured on the full protocol, the one arm we measured that is defensible on both
-axes.
+because the six cells that vary prompt against channel show the two quantities have different
+sources. Hold follows the modulation, which adds \(+21.0\) points under the discerning prompt
+(50.3\% to 71.3\%, paired Wilcoxon \(p<0.001\); Appendix~\ref{app:matched}).
+
+Discrimination follows the prompt, but whether it survives the modulation depends on which
+prompt it is stacked with, and the three matched pairs disagree. Under \emph{mild} the AUC is
+at chance either way (\(0.44\) to \(0.48\)); under \emph{discerning} it survives intact
+(\(0.72\) to \(0.71\)); under \emph{open}, which also invites updating, \(0.68\) falls to
+chance. What separates the two update-inviting prompts we cannot say: \emph{discerning}
+directs the model to weigh what a challenge offers, where \emph{open} names the conditions for
+conceding without asking for that assessment, but whether that is the operative difference or
+the host simply follows one instruction more reliably is beyond what six cells settle.
+Composition is therefore demonstrated, not general. The second row of Table~\ref{tab:auc} is
+the demonstration, at \(0.71\) [0.60, 0.81] and 71.1\% hold on the full protocol, the one arm
+we measured that is defensible on both axes.
 
 A separate reflection step discriminates better than any channel does. The unmodified host,
 reading the transcript afterward, reaches \(0.68\)--\(0.73\) whatever channel produced the
